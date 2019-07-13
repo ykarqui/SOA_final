@@ -1,0 +1,764 @@
+13-07-2019 16:58:50.492 INFO  ar.edu.iua.soa.cse.CseApplication.logStarting Starting CseApplication on yamil with PID 3582 (/home/yamil/Documents/SOA/final/cse/target/classes started by yamil in /home/yamil/Documents/SOA/final/cse)
+13-07-2019 16:58:50.500 INFO  ar.edu.iua.soa.cse.CseApplication.logStartupProfileInfo No active profile set, falling back to default profiles: default
+13-07-2019 16:58:50.557 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@18ec12a1: startup date [Sat Jul 13 16:58:50 ART 2019]; root of context hierarchy
+13-07-2019 16:58:52.606 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a16361b9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13-07-2019 16:58:53.319 INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize Tomcat initialized with port(s): 8093 (http)
+13-07-2019 16:58:53.378 INFO  o.a.catalina.core.StandardService.log Starting service [Tomcat]
+13-07-2019 16:58:53.379 INFO  o.a.catalina.core.StandardEngine.log Starting Servlet Engine: Apache Tomcat/8.5.34
+13-07-2019 16:58:53.397 INFO  o.a.c.core.AprLifecycleListener.log The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+13-07-2019 16:58:53.600 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring embedded WebApplicationContext
+13-07-2019 16:58:53.600 INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext Root WebApplicationContext: initialization completed in 3043 ms
+13-07-2019 16:58:54.434 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'characterEncodingFilter' to: [/*]
+13-07-2019 16:58:54.435 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'webMvcMetricsFilter' to: [/*]
+13-07-2019 16:58:54.435 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+13-07-2019 16:58:54.435 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpPutFormContentFilter' to: [/*]
+13-07-2019 16:58:54.436 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'requestContextFilter' to: [/*]
+13-07-2019 16:58:54.436 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpTraceFilter' to: [/*]
+13-07-2019 16:58:54.436 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet dispatcherServlet mapped to [/]
+13-07-2019 16:58:54.438 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet webServlet mapped to [/h2-console/*]
+13-07-2019 16:58:54.582 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-1 - Starting...
+13-07-2019 16:58:54.818 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-1 - Start completed.
+13-07-2019 16:58:54.866 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory Building JPA container EntityManagerFactory for persistence unit 'default'
+13-07-2019 16:58:54.889 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+13-07-2019 16:58:55.056 INFO  org.hibernate.Version.logVersion HHH000412: Hibernate Core {5.2.17.Final}
+13-07-2019 16:58:55.058 INFO  org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+13-07-2019 16:58:55.097 INFO  o.h.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+13-07-2019 16:58:55.228 INFO  org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+13-07-2019 16:58:55.663 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 16:58:56.068 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 16:58:56.311 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@18ec12a1: startup date [Sat Jul 13 16:58:50 ART 2019]; root of context hierarchy
+13-07-2019 16:58:56.361 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-07-2019 16:58:56.417 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[POST]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.add(ar.edu.iua.soa.cse.model.User)
+13-07-2019 16:58:56.419 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.update(ar.edu.iua.soa.cse.model.User)
+13-07-2019 16:58:56.419 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.load(long)
+13-07-2019 16:58:56.420 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> ar.edu.iua.soa.cse.web.services.UserRESTController.delete(long)
+13-07-2019 16:58:56.421 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<ar.edu.iua.soa.cse.model.User>> ar.edu.iua.soa.cse.web.services.UserRESTController.list()
+13-07-2019 16:58:56.425 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13-07-2019 16:58:56.425 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+13-07-2019 16:58:56.460 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 16:58:56.461 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 16:58:56.981 INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer LiveReload server is running on port 35729
+13-07-2019 16:58:57.000 INFO  o.s.b.a.e.web.EndpointLinksResolver.<init> Exposing 2 endpoint(s) beneath base path '/actuator'
+13-07-2019 16:58:57.014 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+13-07-2019 16:58:57.015 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+13-07-2019 16:58:57.016 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13-07-2019 16:58:57.079 INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated Registering beans for JMX exposure on startup
+13-07-2019 16:58:57.081 INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect Bean with name 'dataSource' has been autodetected for JMX exposure
+13-07-2019 16:58:57.090 INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+13-07-2019 16:58:57.147 INFO  o.s.b.w.e.tomcat.TomcatWebServer.start Tomcat started on port(s): 8093 (http) with context path ''
+13-07-2019 16:58:57.151 INFO  ar.edu.iua.soa.cse.CseApplication.logStarted Started CseApplication in 7.092 seconds (JVM running for 7.702)
+13-07-2019 16:59:07.992 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring FrameworkServlet 'dispatcherServlet'
+13-07-2019 16:59:07.992 INFO  o.s.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcherServlet': initialization started
+13-07-2019 16:59:08.017 INFO  o.s.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+13-07-2019 16:59:08.310 INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService HHH000397: Using ASTQueryTranslatorFactory
+13-07-2019 17:13:02.831 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@18ec12a1: startup date [Sat Jul 13 16:58:50 ART 2019]; root of context hierarchy
+13-07-2019 17:13:02.848 INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy Unregistering JMX-exposed beans on shutdown
+13-07-2019 17:13:02.851 INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans Unregistering JMX-exposed beans
+13-07-2019 17:13:02.864 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy Closing JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 17:13:02.869 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-1 - Shutdown initiated...
+13-07-2019 17:13:02.886 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-1 - Shutdown completed.
+13-07-2019 18:28:14.027 INFO  ar.edu.iua.soa.cse.CseApplication.logStarting Starting CseApplication on yamil with PID 7847 (/home/yamil/Documents/SOA/final/cse/target/classes started by yamil in /home/yamil/Documents/SOA/final/cse)
+13-07-2019 18:28:14.038 INFO  ar.edu.iua.soa.cse.CseApplication.logStartupProfileInfo No active profile set, falling back to default profiles: default
+13-07-2019 18:28:14.158 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@76362f1d: startup date [Sat Jul 13 18:28:14 ART 2019]; root of context hierarchy
+13-07-2019 18:28:16.988 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ef410258] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13-07-2019 18:28:17.812 INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize Tomcat initialized with port(s): 8093 (http)
+13-07-2019 18:28:17.868 INFO  o.a.catalina.core.StandardService.log Starting service [Tomcat]
+13-07-2019 18:28:17.869 INFO  o.a.catalina.core.StandardEngine.log Starting Servlet Engine: Apache Tomcat/8.5.34
+13-07-2019 18:28:17.886 INFO  o.a.c.core.AprLifecycleListener.log The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+13-07-2019 18:28:18.089 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring embedded WebApplicationContext
+13-07-2019 18:28:18.090 INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext Root WebApplicationContext: initialization completed in 3931 ms
+13-07-2019 18:28:18.990 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'characterEncodingFilter' to: [/*]
+13-07-2019 18:28:18.991 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'webMvcMetricsFilter' to: [/*]
+13-07-2019 18:28:18.991 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+13-07-2019 18:28:18.992 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpPutFormContentFilter' to: [/*]
+13-07-2019 18:28:18.992 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'requestContextFilter' to: [/*]
+13-07-2019 18:28:18.993 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpTraceFilter' to: [/*]
+13-07-2019 18:28:18.993 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet dispatcherServlet mapped to [/]
+13-07-2019 18:28:18.995 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet webServlet mapped to [/h2-console/*]
+13-07-2019 18:28:19.130 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-1 - Starting...
+13-07-2019 18:28:19.437 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-1 - Start completed.
+13-07-2019 18:28:19.500 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory Building JPA container EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:28:19.529 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+13-07-2019 18:28:19.728 INFO  org.hibernate.Version.logVersion HHH000412: Hibernate Core {5.2.17.Final}
+13-07-2019 18:28:19.730 INFO  org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+13-07-2019 18:28:19.803 INFO  o.h.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+13-07-2019 18:28:19.996 INFO  org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+13-07-2019 18:28:20.680 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:28:21.112 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userBusiness': Unsatisfied dependency expressed through field 'pe'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.crypto.password.PasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+13-07-2019 18:28:21.114 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy Closing JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:28:21.116 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-1 - Shutdown initiated...
+13-07-2019 18:28:21.127 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-1 - Shutdown completed.
+13-07-2019 18:28:21.131 INFO  o.a.catalina.core.StandardService.log Stopping service [Tomcat]
+13-07-2019 18:28:21.162 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+13-07-2019 18:28:21.365 ERROR o.s.b.d.LoggingFailureAnalysisReporter.report 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field pe in ar.edu.iua.soa.cse.business.UserBusiness required a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' in your configuration.
+
+13-07-2019 18:33:17.396 INFO  ar.edu.iua.soa.cse.CseApplication.logStarting Starting CseApplication on yamil with PID 8279 (/home/yamil/Documents/SOA/final/cse/target/classes started by yamil in /home/yamil/Documents/SOA/final/cse)
+13-07-2019 18:33:17.398 INFO  ar.edu.iua.soa.cse.CseApplication.logStartupProfileInfo No active profile set, falling back to default profiles: default
+13-07-2019 18:33:17.467 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3549284a: startup date [Sat Jul 13 18:33:17 ART 2019]; root of context hierarchy
+13-07-2019 18:33:19.740 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$30e51d35] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13-07-2019 18:33:20.359 INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize Tomcat initialized with port(s): 8093 (http)
+13-07-2019 18:33:20.402 INFO  o.a.catalina.core.StandardService.log Starting service [Tomcat]
+13-07-2019 18:33:20.402 INFO  o.a.catalina.core.StandardEngine.log Starting Servlet Engine: Apache Tomcat/8.5.34
+13-07-2019 18:33:20.411 INFO  o.a.c.core.AprLifecycleListener.log The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+13-07-2019 18:33:20.506 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring embedded WebApplicationContext
+13-07-2019 18:33:20.507 INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext Root WebApplicationContext: initialization completed in 3040 ms
+13-07-2019 18:33:21.541 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'characterEncodingFilter' to: [/*]
+13-07-2019 18:33:21.543 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'webMvcMetricsFilter' to: [/*]
+13-07-2019 18:33:21.544 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+13-07-2019 18:33:21.544 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpPutFormContentFilter' to: [/*]
+13-07-2019 18:33:21.544 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'requestContextFilter' to: [/*]
+13-07-2019 18:33:21.545 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpTraceFilter' to: [/*]
+13-07-2019 18:33:21.546 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet dispatcherServlet mapped to [/]
+13-07-2019 18:33:21.548 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet webServlet mapped to [/h2-console/*]
+13-07-2019 18:33:21.684 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-1 - Starting...
+13-07-2019 18:33:21.989 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-1 - Start completed.
+13-07-2019 18:33:22.025 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory Building JPA container EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:33:22.046 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+13-07-2019 18:33:22.127 INFO  org.hibernate.Version.logVersion HHH000412: Hibernate Core {5.2.17.Final}
+13-07-2019 18:33:22.129 INFO  org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+13-07-2019 18:33:22.175 INFO  o.h.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+13-07-2019 18:33:22.303 INFO  org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+13-07-2019 18:33:22.778 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:33:23.168 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userBusiness': Unsatisfied dependency expressed through field 'pe'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.crypto.password.PasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+13-07-2019 18:33:23.169 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy Closing JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:33:23.171 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-1 - Shutdown initiated...
+13-07-2019 18:33:23.188 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-1 - Shutdown completed.
+13-07-2019 18:33:23.191 INFO  o.a.catalina.core.StandardService.log Stopping service [Tomcat]
+13-07-2019 18:33:23.213 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+13-07-2019 18:33:23.475 ERROR o.s.b.d.LoggingFailureAnalysisReporter.report 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field pe in ar.edu.iua.soa.cse.business.UserBusiness required a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' in your configuration.
+
+13-07-2019 18:35:19.964 INFO  ar.edu.iua.soa.cse.CseApplication.logStarting Starting CseApplication on yamil with PID 8362 (/home/yamil/Documents/SOA/final/cse/target/classes started by yamil in /home/yamil/Documents/SOA/final/cse)
+13-07-2019 18:35:19.966 INFO  ar.edu.iua.soa.cse.CseApplication.logStartupProfileInfo No active profile set, falling back to default profiles: default
+13-07-2019 18:35:20.068 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@51d6d383: startup date [Sat Jul 13 18:35:20 ART 2019]; root of context hierarchy
+13-07-2019 18:35:22.284 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$410e4f5b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13-07-2019 18:35:22.857 INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize Tomcat initialized with port(s): 8093 (http)
+13-07-2019 18:35:22.887 INFO  o.a.catalina.core.StandardService.log Starting service [Tomcat]
+13-07-2019 18:35:22.887 INFO  o.a.catalina.core.StandardEngine.log Starting Servlet Engine: Apache Tomcat/8.5.34
+13-07-2019 18:35:22.896 INFO  o.a.c.core.AprLifecycleListener.log The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+13-07-2019 18:35:23.149 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring embedded WebApplicationContext
+13-07-2019 18:35:23.149 INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext Root WebApplicationContext: initialization completed in 3081 ms
+13-07-2019 18:35:24.118 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'characterEncodingFilter' to: [/*]
+13-07-2019 18:35:24.119 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'webMvcMetricsFilter' to: [/*]
+13-07-2019 18:35:24.119 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+13-07-2019 18:35:24.119 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpPutFormContentFilter' to: [/*]
+13-07-2019 18:35:24.119 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'requestContextFilter' to: [/*]
+13-07-2019 18:35:24.120 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpTraceFilter' to: [/*]
+13-07-2019 18:35:24.120 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet dispatcherServlet mapped to [/]
+13-07-2019 18:35:24.122 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet webServlet mapped to [/h2-console/*]
+13-07-2019 18:35:24.251 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-1 - Starting...
+13-07-2019 18:35:24.470 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-1 - Start completed.
+13-07-2019 18:35:24.505 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory Building JPA container EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:35:24.520 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+13-07-2019 18:35:24.625 INFO  org.hibernate.Version.logVersion HHH000412: Hibernate Core {5.2.17.Final}
+13-07-2019 18:35:24.627 INFO  org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+13-07-2019 18:35:24.668 INFO  o.h.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+13-07-2019 18:35:24.803 INFO  org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+13-07-2019 18:35:25.248 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:35:25.678 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:35:25.942 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@51d6d383: startup date [Sat Jul 13 18:35:20 ART 2019]; root of context hierarchy
+13-07-2019 18:35:25.992 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-07-2019 18:35:26.044 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[POST]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.add(ar.edu.iua.soa.cse.model.User)
+13-07-2019 18:35:26.046 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.update(ar.edu.iua.soa.cse.model.User)
+13-07-2019 18:35:26.046 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.load(long)
+13-07-2019 18:35:26.047 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> ar.edu.iua.soa.cse.web.services.UserRESTController.delete(long)
+13-07-2019 18:35:26.048 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<ar.edu.iua.soa.cse.model.User>> ar.edu.iua.soa.cse.web.services.UserRESTController.list()
+13-07-2019 18:35:26.051 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13-07-2019 18:35:26.052 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+13-07-2019 18:35:26.089 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:35:26.089 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:35:26.532 INFO  o.s.b.a.e.web.EndpointLinksResolver.<init> Exposing 2 endpoint(s) beneath base path '/actuator'
+13-07-2019 18:35:26.542 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+13-07-2019 18:35:26.543 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+13-07-2019 18:35:26.544 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13-07-2019 18:35:26.620 INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer LiveReload server is running on port 35729
+13-07-2019 18:35:26.673 INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated Registering beans for JMX exposure on startup
+13-07-2019 18:35:26.675 INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect Bean with name 'dataSource' has been autodetected for JMX exposure
+13-07-2019 18:35:26.686 INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+13-07-2019 18:35:26.775 INFO  o.s.b.w.e.tomcat.TomcatWebServer.start Tomcat started on port(s): 8093 (http) with context path ''
+13-07-2019 18:35:26.781 INFO  ar.edu.iua.soa.cse.CseApplication.logStarted Started CseApplication in 7.248 seconds (JVM running for 7.847)
+13-07-2019 18:35:33.758 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring FrameworkServlet 'dispatcherServlet'
+13-07-2019 18:35:33.758 INFO  o.s.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcherServlet': initialization started
+13-07-2019 18:35:33.778 INFO  o.s.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+13-07-2019 18:35:41.226 INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService HHH000397: Using ASTQueryTranslatorFactory
+13-07-2019 18:37:48.243 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@51d6d383: startup date [Sat Jul 13 18:35:20 ART 2019]; root of context hierarchy
+13-07-2019 18:37:48.248 INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy Unregistering JMX-exposed beans on shutdown
+13-07-2019 18:37:48.250 INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans Unregistering JMX-exposed beans
+13-07-2019 18:37:48.252 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy Closing JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:37:48.255 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-1 - Shutdown initiated...
+13-07-2019 18:37:48.266 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-1 - Shutdown completed.
+13-07-2019 18:37:48.791 INFO  ar.edu.iua.soa.cse.CseApplication.logStarting Starting CseApplication on yamil with PID 8362 (/home/yamil/Documents/SOA/final/cse/target/classes started by yamil in /home/yamil/Documents/SOA/final/cse)
+13-07-2019 18:37:48.793 INFO  ar.edu.iua.soa.cse.CseApplication.logStartupProfileInfo No active profile set, falling back to default profiles: default
+13-07-2019 18:37:48.796 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7fe3e696: startup date [Sat Jul 13 18:37:48 ART 2019]; root of context hierarchy
+13-07-2019 18:37:49.661 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$410e4f5b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13-07-2019 18:37:49.756 INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize Tomcat initialized with port(s): 8093 (http)
+13-07-2019 18:37:49.758 INFO  o.a.catalina.core.StandardService.log Starting service [Tomcat]
+13-07-2019 18:37:49.758 INFO  o.a.catalina.core.StandardEngine.log Starting Servlet Engine: Apache Tomcat/8.5.34
+13-07-2019 18:37:49.785 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring embedded WebApplicationContext
+13-07-2019 18:37:49.786 INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext Root WebApplicationContext: initialization completed in 990 ms
+13-07-2019 18:37:50.072 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'characterEncodingFilter' to: [/*]
+13-07-2019 18:37:50.073 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'webMvcMetricsFilter' to: [/*]
+13-07-2019 18:37:50.073 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+13-07-2019 18:37:50.073 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpPutFormContentFilter' to: [/*]
+13-07-2019 18:37:50.073 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'requestContextFilter' to: [/*]
+13-07-2019 18:37:50.074 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpTraceFilter' to: [/*]
+13-07-2019 18:37:50.074 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet dispatcherServlet mapped to [/]
+13-07-2019 18:37:50.074 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet webServlet mapped to [/h2-console/*]
+13-07-2019 18:37:50.111 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-2 - Starting...
+13-07-2019 18:37:50.123 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-2 - Start completed.
+13-07-2019 18:37:50.131 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory Building JPA container EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:37:50.132 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+13-07-2019 18:37:50.142 INFO  org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+13-07-2019 18:37:50.192 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:37:50.327 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:37:50.427 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7fe3e696: startup date [Sat Jul 13 18:37:48 ART 2019]; root of context hierarchy
+13-07-2019 18:37:50.439 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-07-2019 18:37:50.451 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[POST]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.add(ar.edu.iua.soa.cse.model.User)
+13-07-2019 18:37:50.453 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.update(ar.edu.iua.soa.cse.model.User)
+13-07-2019 18:37:50.454 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.load(long)
+13-07-2019 18:37:50.454 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> ar.edu.iua.soa.cse.web.services.UserRESTController.delete(long)
+13-07-2019 18:37:50.455 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/check],methods=[GET]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.check(ar.edu.iua.soa.cse.model.User)
+13-07-2019 18:37:50.455 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<ar.edu.iua.soa.cse.model.User>> ar.edu.iua.soa.cse.web.services.UserRESTController.list()
+13-07-2019 18:37:50.462 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13-07-2019 18:37:50.463 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+13-07-2019 18:37:50.482 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:37:50.482 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:37:50.673 INFO  o.s.b.a.e.web.EndpointLinksResolver.<init> Exposing 2 endpoint(s) beneath base path '/actuator'
+13-07-2019 18:37:50.678 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+13-07-2019 18:37:50.679 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+13-07-2019 18:37:50.680 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13-07-2019 18:37:50.704 INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer LiveReload server is running on port 35729
+13-07-2019 18:37:50.747 INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated Registering beans for JMX exposure on startup
+13-07-2019 18:37:50.748 INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect Bean with name 'dataSource' has been autodetected for JMX exposure
+13-07-2019 18:37:50.754 INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+13-07-2019 18:37:50.792 INFO  o.s.b.w.e.tomcat.TomcatWebServer.start Tomcat started on port(s): 8093 (http) with context path ''
+13-07-2019 18:37:50.795 INFO  ar.edu.iua.soa.cse.CseApplication.logStarted Started CseApplication in 2.061 seconds (JVM running for 151.862)
+13-07-2019 18:37:50.802 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent Condition evaluation unchanged
+13-07-2019 18:37:51.340 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7fe3e696: startup date [Sat Jul 13 18:37:48 ART 2019]; root of context hierarchy
+13-07-2019 18:37:51.344 INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy Unregistering JMX-exposed beans on shutdown
+13-07-2019 18:37:51.345 INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans Unregistering JMX-exposed beans
+13-07-2019 18:37:51.346 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy Closing JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:37:51.347 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-2 - Shutdown initiated...
+13-07-2019 18:37:51.356 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-2 - Shutdown completed.
+13-07-2019 18:48:16.282 INFO  ar.edu.iua.soa.cse.CseApplication.logStarting Starting CseApplication on yamil with PID 8869 (/home/yamil/Documents/SOA/final/cse/target/classes started by yamil in /home/yamil/Documents/SOA/final/cse)
+13-07-2019 18:48:16.291 INFO  ar.edu.iua.soa.cse.CseApplication.logStartupProfileInfo No active profile set, falling back to default profiles: default
+13-07-2019 18:48:16.345 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@753203e5: startup date [Sat Jul 13 18:48:16 ART 2019]; root of context hierarchy
+13-07-2019 18:48:18.629 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e0da7540] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13-07-2019 18:48:19.165 INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize Tomcat initialized with port(s): 8093 (http)
+13-07-2019 18:48:19.198 INFO  o.a.catalina.core.StandardService.log Starting service [Tomcat]
+13-07-2019 18:48:19.198 INFO  o.a.catalina.core.StandardEngine.log Starting Servlet Engine: Apache Tomcat/8.5.34
+13-07-2019 18:48:19.207 INFO  o.a.c.core.AprLifecycleListener.log The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+13-07-2019 18:48:19.400 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring embedded WebApplicationContext
+13-07-2019 18:48:19.401 INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext Root WebApplicationContext: initialization completed in 3057 ms
+13-07-2019 18:48:20.231 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'characterEncodingFilter' to: [/*]
+13-07-2019 18:48:20.232 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'webMvcMetricsFilter' to: [/*]
+13-07-2019 18:48:20.232 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+13-07-2019 18:48:20.232 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpPutFormContentFilter' to: [/*]
+13-07-2019 18:48:20.233 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'requestContextFilter' to: [/*]
+13-07-2019 18:48:20.233 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpTraceFilter' to: [/*]
+13-07-2019 18:48:20.233 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet dispatcherServlet mapped to [/]
+13-07-2019 18:48:20.235 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet webServlet mapped to [/h2-console/*]
+13-07-2019 18:48:20.367 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-1 - Starting...
+13-07-2019 18:48:20.626 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-1 - Start completed.
+13-07-2019 18:48:20.663 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory Building JPA container EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:48:20.678 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+13-07-2019 18:48:20.747 INFO  org.hibernate.Version.logVersion HHH000412: Hibernate Core {5.2.17.Final}
+13-07-2019 18:48:20.749 INFO  org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+13-07-2019 18:48:20.801 INFO  o.h.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+13-07-2019 18:48:20.932 INFO  org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+13-07-2019 18:48:21.381 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:48:21.952 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:48:22.292 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@753203e5: startup date [Sat Jul 13 18:48:16 ART 2019]; root of context hierarchy
+13-07-2019 18:48:22.341 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-07-2019 18:48:22.398 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[POST]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.add(ar.edu.iua.soa.cse.model.User)
+13-07-2019 18:48:22.399 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.update(ar.edu.iua.soa.cse.model.User)
+13-07-2019 18:48:22.401 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.load(long)
+13-07-2019 18:48:22.402 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> ar.edu.iua.soa.cse.web.services.UserRESTController.delete(long)
+13-07-2019 18:48:22.403 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/check],methods=[GET]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.check(ar.edu.iua.soa.cse.model.User)
+13-07-2019 18:48:22.404 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<ar.edu.iua.soa.cse.model.User>> ar.edu.iua.soa.cse.web.services.UserRESTController.list()
+13-07-2019 18:48:22.409 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13-07-2019 18:48:22.410 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+13-07-2019 18:48:22.476 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:48:22.477 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:48:23.112 INFO  o.s.b.a.e.web.EndpointLinksResolver.<init> Exposing 2 endpoint(s) beneath base path '/actuator'
+13-07-2019 18:48:23.128 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+13-07-2019 18:48:23.129 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+13-07-2019 18:48:23.130 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13-07-2019 18:48:23.255 INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer LiveReload server is running on port 35729
+13-07-2019 18:48:23.352 INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated Registering beans for JMX exposure on startup
+13-07-2019 18:48:23.356 INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect Bean with name 'dataSource' has been autodetected for JMX exposure
+13-07-2019 18:48:23.365 INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+13-07-2019 18:48:23.432 INFO  o.s.b.w.e.tomcat.TomcatWebServer.start Tomcat started on port(s): 8093 (http) with context path ''
+13-07-2019 18:48:23.438 INFO  ar.edu.iua.soa.cse.CseApplication.logStarted Started CseApplication in 7.831 seconds (JVM running for 8.348)
+13-07-2019 18:48:27.841 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring FrameworkServlet 'dispatcherServlet'
+13-07-2019 18:48:27.841 INFO  o.s.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcherServlet': initialization started
+13-07-2019 18:48:28.068 INFO  o.s.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcherServlet': initialization completed in 227 ms
+13-07-2019 18:48:28.280 INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService HHH000397: Using ASTQueryTranslatorFactory
+13-07-2019 18:49:46.796 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@753203e5: startup date [Sat Jul 13 18:48:16 ART 2019]; root of context hierarchy
+13-07-2019 18:49:46.807 INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy Unregistering JMX-exposed beans on shutdown
+13-07-2019 18:49:46.809 INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans Unregistering JMX-exposed beans
+13-07-2019 18:49:46.812 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy Closing JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:49:46.818 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-1 - Shutdown initiated...
+13-07-2019 18:49:46.839 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-1 - Shutdown completed.
+13-07-2019 18:49:47.314 INFO  ar.edu.iua.soa.cse.CseApplication.logStarting Starting CseApplication on yamil with PID 8869 (/home/yamil/Documents/SOA/final/cse/target/classes started by yamil in /home/yamil/Documents/SOA/final/cse)
+13-07-2019 18:49:47.315 INFO  ar.edu.iua.soa.cse.CseApplication.logStartupProfileInfo No active profile set, falling back to default profiles: default
+13-07-2019 18:49:47.317 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@f260a5b: startup date [Sat Jul 13 18:49:47 ART 2019]; root of context hierarchy
+13-07-2019 18:49:48.314 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e0da7540] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13-07-2019 18:49:48.522 INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize Tomcat initialized with port(s): 8093 (http)
+13-07-2019 18:49:48.529 INFO  o.a.catalina.core.StandardService.log Starting service [Tomcat]
+13-07-2019 18:49:48.530 INFO  o.a.catalina.core.StandardEngine.log Starting Servlet Engine: Apache Tomcat/8.5.34
+13-07-2019 18:49:48.560 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring embedded WebApplicationContext
+13-07-2019 18:49:48.561 INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext Root WebApplicationContext: initialization completed in 1244 ms
+13-07-2019 18:49:49.030 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'characterEncodingFilter' to: [/*]
+13-07-2019 18:49:49.031 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'webMvcMetricsFilter' to: [/*]
+13-07-2019 18:49:49.034 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+13-07-2019 18:49:49.035 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpPutFormContentFilter' to: [/*]
+13-07-2019 18:49:49.036 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'requestContextFilter' to: [/*]
+13-07-2019 18:49:49.036 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpTraceFilter' to: [/*]
+13-07-2019 18:49:49.036 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet dispatcherServlet mapped to [/]
+13-07-2019 18:49:49.037 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet webServlet mapped to [/h2-console/*]
+13-07-2019 18:49:49.101 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-2 - Starting...
+13-07-2019 18:49:49.128 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-2 - Start completed.
+13-07-2019 18:49:49.139 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory Building JPA container EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:49:49.140 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+13-07-2019 18:49:49.154 INFO  org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+13-07-2019 18:49:49.210 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:49:49.371 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:49:49.458 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@f260a5b: startup date [Sat Jul 13 18:49:47 ART 2019]; root of context hierarchy
+13-07-2019 18:49:49.465 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-07-2019 18:49:49.477 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[POST]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.add(ar.edu.iua.soa.cse.model.User)
+13-07-2019 18:49:49.477 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.update(ar.edu.iua.soa.cse.model.User)
+13-07-2019 18:49:49.478 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.load(long)
+13-07-2019 18:49:49.478 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> ar.edu.iua.soa.cse.web.services.UserRESTController.delete(long)
+13-07-2019 18:49:49.479 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/check],methods=[GET]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.check(ar.edu.iua.soa.cse.model.User)
+13-07-2019 18:49:49.479 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<ar.edu.iua.soa.cse.model.User>> ar.edu.iua.soa.cse.web.services.UserRESTController.list()
+13-07-2019 18:49:49.482 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13-07-2019 18:49:49.482 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+13-07-2019 18:49:49.496 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:49:49.497 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:49:49.643 INFO  o.s.b.a.e.web.EndpointLinksResolver.<init> Exposing 2 endpoint(s) beneath base path '/actuator'
+13-07-2019 18:49:49.647 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+13-07-2019 18:49:49.647 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+13-07-2019 18:49:49.648 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13-07-2019 18:49:49.668 INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer LiveReload server is running on port 35729
+13-07-2019 18:49:49.697 INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated Registering beans for JMX exposure on startup
+13-07-2019 18:49:49.698 INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect Bean with name 'dataSource' has been autodetected for JMX exposure
+13-07-2019 18:49:49.704 INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+13-07-2019 18:49:49.728 INFO  o.s.b.w.e.tomcat.TomcatWebServer.start Tomcat started on port(s): 8093 (http) with context path ''
+13-07-2019 18:49:49.729 INFO  ar.edu.iua.soa.cse.CseApplication.logStarted Started CseApplication in 2.515 seconds (JVM running for 94.64)
+13-07-2019 18:49:49.735 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent Condition evaluation unchanged
+13-07-2019 18:49:55.122 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring FrameworkServlet 'dispatcherServlet'
+13-07-2019 18:49:55.123 INFO  o.s.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcherServlet': initialization started
+13-07-2019 18:49:55.133 INFO  o.s.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcherServlet': initialization completed in 10 ms
+13-07-2019 18:49:55.161 INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService HHH000397: Using ASTQueryTranslatorFactory
+13-07-2019 18:50:40.564 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@f260a5b: startup date [Sat Jul 13 18:49:47 ART 2019]; root of context hierarchy
+13-07-2019 18:50:40.576 INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy Unregistering JMX-exposed beans on shutdown
+13-07-2019 18:50:40.577 INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans Unregistering JMX-exposed beans
+13-07-2019 18:50:40.578 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy Closing JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:50:40.583 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-2 - Shutdown initiated...
+13-07-2019 18:50:40.613 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-2 - Shutdown completed.
+13-07-2019 18:50:41.177 INFO  ar.edu.iua.soa.cse.CseApplication.logStarting Starting CseApplication on yamil with PID 8869 (/home/yamil/Documents/SOA/final/cse/target/classes started by yamil in /home/yamil/Documents/SOA/final/cse)
+13-07-2019 18:50:41.178 INFO  ar.edu.iua.soa.cse.CseApplication.logStartupProfileInfo No active profile set, falling back to default profiles: default
+13-07-2019 18:50:41.182 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@581fb307: startup date [Sat Jul 13 18:50:41 ART 2019]; root of context hierarchy
+13-07-2019 18:50:41.772 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e0da7540] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13-07-2019 18:50:41.862 INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize Tomcat initialized with port(s): 8093 (http)
+13-07-2019 18:50:41.863 INFO  o.a.catalina.core.StandardService.log Starting service [Tomcat]
+13-07-2019 18:50:41.863 INFO  o.a.catalina.core.StandardEngine.log Starting Servlet Engine: Apache Tomcat/8.5.34
+13-07-2019 18:50:41.872 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring embedded WebApplicationContext
+13-07-2019 18:50:41.873 INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext Root WebApplicationContext: initialization completed in 691 ms
+13-07-2019 18:50:42.179 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'characterEncodingFilter' to: [/*]
+13-07-2019 18:50:42.187 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'webMvcMetricsFilter' to: [/*]
+13-07-2019 18:50:42.190 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+13-07-2019 18:50:42.193 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpPutFormContentFilter' to: [/*]
+13-07-2019 18:50:42.193 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'requestContextFilter' to: [/*]
+13-07-2019 18:50:42.193 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpTraceFilter' to: [/*]
+13-07-2019 18:50:42.194 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet dispatcherServlet mapped to [/]
+13-07-2019 18:50:42.194 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet webServlet mapped to [/h2-console/*]
+13-07-2019 18:50:42.240 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-3 - Starting...
+13-07-2019 18:50:42.253 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-3 - Start completed.
+13-07-2019 18:50:42.261 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory Building JPA container EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:50:42.262 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+13-07-2019 18:50:42.277 INFO  org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+13-07-2019 18:50:42.350 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:50:42.482 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:50:42.663 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@581fb307: startup date [Sat Jul 13 18:50:41 ART 2019]; root of context hierarchy
+13-07-2019 18:50:42.685 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-07-2019 18:50:42.695 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[POST]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.add(ar.edu.iua.soa.cse.model.User)
+13-07-2019 18:50:42.695 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.update(ar.edu.iua.soa.cse.model.User)
+13-07-2019 18:50:42.697 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.load(long)
+13-07-2019 18:50:42.697 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> ar.edu.iua.soa.cse.web.services.UserRESTController.delete(long)
+13-07-2019 18:50:42.698 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/check],methods=[GET]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.check(ar.edu.iua.soa.cse.model.User)
+13-07-2019 18:50:42.699 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<ar.edu.iua.soa.cse.model.User>> ar.edu.iua.soa.cse.web.services.UserRESTController.list()
+13-07-2019 18:50:42.701 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13-07-2019 18:50:42.703 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+13-07-2019 18:50:42.715 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:50:42.716 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:50:42.867 INFO  o.s.b.a.e.web.EndpointLinksResolver.<init> Exposing 2 endpoint(s) beneath base path '/actuator'
+13-07-2019 18:50:42.871 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+13-07-2019 18:50:42.871 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+13-07-2019 18:50:42.872 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13-07-2019 18:50:42.892 INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer LiveReload server is running on port 35729
+13-07-2019 18:50:42.915 INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated Registering beans for JMX exposure on startup
+13-07-2019 18:50:42.916 INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect Bean with name 'dataSource' has been autodetected for JMX exposure
+13-07-2019 18:50:42.921 INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+13-07-2019 18:50:42.947 INFO  o.s.b.w.e.tomcat.TomcatWebServer.start Tomcat started on port(s): 8093 (http) with context path ''
+13-07-2019 18:50:42.951 INFO  ar.edu.iua.soa.cse.CseApplication.logStarted Started CseApplication in 1.822 seconds (JVM running for 147.861)
+13-07-2019 18:50:42.954 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent Condition evaluation unchanged
+13-07-2019 18:50:44.262 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring FrameworkServlet 'dispatcherServlet'
+13-07-2019 18:50:44.263 INFO  o.s.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcherServlet': initialization started
+13-07-2019 18:50:44.268 INFO  o.s.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcherServlet': initialization completed in 5 ms
+13-07-2019 18:50:44.292 INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService HHH000397: Using ASTQueryTranslatorFactory
+13-07-2019 18:51:18.351 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@581fb307: startup date [Sat Jul 13 18:50:41 ART 2019]; root of context hierarchy
+13-07-2019 18:51:18.355 INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy Unregistering JMX-exposed beans on shutdown
+13-07-2019 18:51:18.355 INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans Unregistering JMX-exposed beans
+13-07-2019 18:51:18.356 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy Closing JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:51:18.357 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-3 - Shutdown initiated...
+13-07-2019 18:51:18.374 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-3 - Shutdown completed.
+13-07-2019 18:51:18.719 INFO  ar.edu.iua.soa.cse.CseApplication.logStarting Starting CseApplication on yamil with PID 8869 (/home/yamil/Documents/SOA/final/cse/target/classes started by yamil in /home/yamil/Documents/SOA/final/cse)
+13-07-2019 18:51:18.720 INFO  ar.edu.iua.soa.cse.CseApplication.logStartupProfileInfo No active profile set, falling back to default profiles: default
+13-07-2019 18:51:18.723 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@28ab2823: startup date [Sat Jul 13 18:51:18 ART 2019]; root of context hierarchy
+13-07-2019 18:51:19.213 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e0da7540] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13-07-2019 18:51:19.302 INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize Tomcat initialized with port(s): 8093 (http)
+13-07-2019 18:51:19.303 INFO  o.a.catalina.core.StandardService.log Starting service [Tomcat]
+13-07-2019 18:51:19.304 INFO  o.a.catalina.core.StandardEngine.log Starting Servlet Engine: Apache Tomcat/8.5.34
+13-07-2019 18:51:19.315 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring embedded WebApplicationContext
+13-07-2019 18:51:19.316 INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext Root WebApplicationContext: initialization completed in 593 ms
+13-07-2019 18:51:19.529 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'characterEncodingFilter' to: [/*]
+13-07-2019 18:51:19.530 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'webMvcMetricsFilter' to: [/*]
+13-07-2019 18:51:19.530 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+13-07-2019 18:51:19.530 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpPutFormContentFilter' to: [/*]
+13-07-2019 18:51:19.530 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'requestContextFilter' to: [/*]
+13-07-2019 18:51:19.531 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpTraceFilter' to: [/*]
+13-07-2019 18:51:19.531 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet dispatcherServlet mapped to [/]
+13-07-2019 18:51:19.531 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet webServlet mapped to [/h2-console/*]
+13-07-2019 18:51:19.572 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-4 - Starting...
+13-07-2019 18:51:19.592 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-4 - Start completed.
+13-07-2019 18:51:19.599 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory Building JPA container EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:51:19.600 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+13-07-2019 18:51:19.608 INFO  org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+13-07-2019 18:51:19.652 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:51:19.724 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:51:19.807 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@28ab2823: startup date [Sat Jul 13 18:51:18 ART 2019]; root of context hierarchy
+13-07-2019 18:51:19.814 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-07-2019 18:51:19.821 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[POST]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.add(ar.edu.iua.soa.cse.model.User)
+13-07-2019 18:51:19.821 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.update(ar.edu.iua.soa.cse.model.User)
+13-07-2019 18:51:19.822 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.load(long)
+13-07-2019 18:51:19.822 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> ar.edu.iua.soa.cse.web.services.UserRESTController.delete(long)
+13-07-2019 18:51:19.823 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/check],methods=[GET]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.check(ar.edu.iua.soa.cse.model.User)
+13-07-2019 18:51:19.823 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<ar.edu.iua.soa.cse.model.User>> ar.edu.iua.soa.cse.web.services.UserRESTController.list()
+13-07-2019 18:51:19.825 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13-07-2019 18:51:19.825 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+13-07-2019 18:51:19.837 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:51:19.837 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:51:19.972 INFO  o.s.b.a.e.web.EndpointLinksResolver.<init> Exposing 2 endpoint(s) beneath base path '/actuator'
+13-07-2019 18:51:19.975 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+13-07-2019 18:51:19.976 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+13-07-2019 18:51:19.976 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13-07-2019 18:51:19.995 INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer LiveReload server is running on port 35729
+13-07-2019 18:51:20.014 INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated Registering beans for JMX exposure on startup
+13-07-2019 18:51:20.015 INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect Bean with name 'dataSource' has been autodetected for JMX exposure
+13-07-2019 18:51:20.020 INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+13-07-2019 18:51:20.043 INFO  o.s.b.w.e.tomcat.TomcatWebServer.start Tomcat started on port(s): 8093 (http) with context path ''
+13-07-2019 18:51:20.044 INFO  ar.edu.iua.soa.cse.CseApplication.logStarted Started CseApplication in 1.361 seconds (JVM running for 184.955)
+13-07-2019 18:51:20.048 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent Condition evaluation unchanged
+13-07-2019 18:51:24.168 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring FrameworkServlet 'dispatcherServlet'
+13-07-2019 18:51:24.168 INFO  o.s.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcherServlet': initialization started
+13-07-2019 18:51:24.174 INFO  o.s.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcherServlet': initialization completed in 5 ms
+13-07-2019 18:51:24.188 INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService HHH000397: Using ASTQueryTranslatorFactory
+13-07-2019 18:52:17.493 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@28ab2823: startup date [Sat Jul 13 18:51:18 ART 2019]; root of context hierarchy
+13-07-2019 18:52:17.496 INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy Unregistering JMX-exposed beans on shutdown
+13-07-2019 18:52:17.497 INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans Unregistering JMX-exposed beans
+13-07-2019 18:52:17.498 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy Closing JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:52:17.503 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-4 - Shutdown initiated...
+13-07-2019 18:52:17.513 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-4 - Shutdown completed.
+13-07-2019 18:52:17.799 INFO  ar.edu.iua.soa.cse.CseApplication.logStarting Starting CseApplication on yamil with PID 8869 (/home/yamil/Documents/SOA/final/cse/target/classes started by yamil in /home/yamil/Documents/SOA/final/cse)
+13-07-2019 18:52:17.800 INFO  ar.edu.iua.soa.cse.CseApplication.logStartupProfileInfo No active profile set, falling back to default profiles: default
+13-07-2019 18:52:17.802 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5d8bc769: startup date [Sat Jul 13 18:52:17 ART 2019]; root of context hierarchy
+13-07-2019 18:52:18.287 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e0da7540] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13-07-2019 18:52:18.365 INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize Tomcat initialized with port(s): 8093 (http)
+13-07-2019 18:52:18.367 INFO  o.a.catalina.core.StandardService.log Starting service [Tomcat]
+13-07-2019 18:52:18.367 INFO  o.a.catalina.core.StandardEngine.log Starting Servlet Engine: Apache Tomcat/8.5.34
+13-07-2019 18:52:18.377 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring embedded WebApplicationContext
+13-07-2019 18:52:18.378 INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext Root WebApplicationContext: initialization completed in 576 ms
+13-07-2019 18:52:18.575 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'characterEncodingFilter' to: [/*]
+13-07-2019 18:52:18.575 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'webMvcMetricsFilter' to: [/*]
+13-07-2019 18:52:18.575 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+13-07-2019 18:52:18.576 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpPutFormContentFilter' to: [/*]
+13-07-2019 18:52:18.576 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'requestContextFilter' to: [/*]
+13-07-2019 18:52:18.576 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpTraceFilter' to: [/*]
+13-07-2019 18:52:18.576 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet dispatcherServlet mapped to [/]
+13-07-2019 18:52:18.577 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet webServlet mapped to [/h2-console/*]
+13-07-2019 18:52:18.625 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-5 - Starting...
+13-07-2019 18:52:18.639 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-5 - Start completed.
+13-07-2019 18:52:18.647 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory Building JPA container EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:52:18.647 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+13-07-2019 18:52:18.656 INFO  org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+13-07-2019 18:52:18.697 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:52:18.812 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:52:18.883 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5d8bc769: startup date [Sat Jul 13 18:52:17 ART 2019]; root of context hierarchy
+13-07-2019 18:52:18.890 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-07-2019 18:52:18.897 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[POST]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.add(ar.edu.iua.soa.cse.model.User)
+13-07-2019 18:52:18.898 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.update(ar.edu.iua.soa.cse.model.User)
+13-07-2019 18:52:18.899 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.load(long)
+13-07-2019 18:52:18.899 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> ar.edu.iua.soa.cse.web.services.UserRESTController.delete(long)
+13-07-2019 18:52:18.900 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/check],methods=[GET]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.check(ar.edu.iua.soa.cse.model.User)
+13-07-2019 18:52:18.900 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<ar.edu.iua.soa.cse.model.User>> ar.edu.iua.soa.cse.web.services.UserRESTController.list()
+13-07-2019 18:52:18.902 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13-07-2019 18:52:18.903 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+13-07-2019 18:52:18.914 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:52:18.915 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:52:19.047 INFO  o.s.b.a.e.web.EndpointLinksResolver.<init> Exposing 2 endpoint(s) beneath base path '/actuator'
+13-07-2019 18:52:19.050 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+13-07-2019 18:52:19.051 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+13-07-2019 18:52:19.052 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13-07-2019 18:52:19.072 INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer LiveReload server is running on port 35729
+13-07-2019 18:52:19.094 INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated Registering beans for JMX exposure on startup
+13-07-2019 18:52:19.095 INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect Bean with name 'dataSource' has been autodetected for JMX exposure
+13-07-2019 18:52:19.100 INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+13-07-2019 18:52:19.126 INFO  o.s.b.w.e.tomcat.TomcatWebServer.start Tomcat started on port(s): 8093 (http) with context path ''
+13-07-2019 18:52:19.127 INFO  ar.edu.iua.soa.cse.CseApplication.logStarted Started CseApplication in 1.351 seconds (JVM running for 244.038)
+13-07-2019 18:52:19.133 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent Condition evaluation unchanged
+13-07-2019 18:52:22.914 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring FrameworkServlet 'dispatcherServlet'
+13-07-2019 18:52:22.914 INFO  o.s.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcherServlet': initialization started
+13-07-2019 18:52:22.919 INFO  o.s.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcherServlet': initialization completed in 5 ms
+13-07-2019 18:52:22.937 INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService HHH000397: Using ASTQueryTranslatorFactory
+13-07-2019 18:53:20.075 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5d8bc769: startup date [Sat Jul 13 18:52:17 ART 2019]; root of context hierarchy
+13-07-2019 18:53:20.080 INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy Unregistering JMX-exposed beans on shutdown
+13-07-2019 18:53:20.080 INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans Unregistering JMX-exposed beans
+13-07-2019 18:53:20.081 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy Closing JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:53:20.082 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-5 - Shutdown initiated...
+13-07-2019 18:53:20.092 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-5 - Shutdown completed.
+13-07-2019 18:57:40.106 INFO  ar.edu.iua.soa.cse.CseApplication.logStarting Starting CseApplication on yamil with PID 9345 (/home/yamil/Documents/SOA/final/cse/target/classes started by yamil in /home/yamil/Documents/SOA/final/cse)
+13-07-2019 18:57:40.108 INFO  ar.edu.iua.soa.cse.CseApplication.logStartupProfileInfo No active profile set, falling back to default profiles: default
+13-07-2019 18:57:40.164 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@115689c7: startup date [Sat Jul 13 18:57:40 ART 2019]; root of context hierarchy
+13-07-2019 18:57:42.097 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9ea2def0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13-07-2019 18:57:42.665 INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize Tomcat initialized with port(s): 8093 (http)
+13-07-2019 18:57:42.696 INFO  o.a.catalina.core.StandardService.log Starting service [Tomcat]
+13-07-2019 18:57:42.696 INFO  o.a.catalina.core.StandardEngine.log Starting Servlet Engine: Apache Tomcat/8.5.34
+13-07-2019 18:57:42.705 INFO  o.a.c.core.AprLifecycleListener.log The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+13-07-2019 18:57:42.892 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring embedded WebApplicationContext
+13-07-2019 18:57:42.893 INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext Root WebApplicationContext: initialization completed in 2729 ms
+13-07-2019 18:57:43.730 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'characterEncodingFilter' to: [/*]
+13-07-2019 18:57:43.730 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'webMvcMetricsFilter' to: [/*]
+13-07-2019 18:57:43.731 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+13-07-2019 18:57:43.731 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpPutFormContentFilter' to: [/*]
+13-07-2019 18:57:43.731 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'requestContextFilter' to: [/*]
+13-07-2019 18:57:43.731 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpTraceFilter' to: [/*]
+13-07-2019 18:57:43.732 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet dispatcherServlet mapped to [/]
+13-07-2019 18:57:43.733 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet webServlet mapped to [/h2-console/*]
+13-07-2019 18:57:43.870 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-1 - Starting...
+13-07-2019 18:57:44.198 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-1 - Start completed.
+13-07-2019 18:57:44.267 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory Building JPA container EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:57:44.289 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+13-07-2019 18:57:44.398 INFO  org.hibernate.Version.logVersion HHH000412: Hibernate Core {5.2.17.Final}
+13-07-2019 18:57:44.401 INFO  org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+13-07-2019 18:57:44.445 INFO  o.h.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+13-07-2019 18:57:44.572 INFO  org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+13-07-2019 18:57:45.057 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 18:57:45.633 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:57:45.943 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@115689c7: startup date [Sat Jul 13 18:57:40 ART 2019]; root of context hierarchy
+13-07-2019 18:57:46.001 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-07-2019 18:57:46.056 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[POST]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.add(ar.edu.iua.soa.cse.model.User)
+13-07-2019 18:57:46.058 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.update(ar.edu.iua.soa.cse.model.User)
+13-07-2019 18:57:46.058 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.load(long)
+13-07-2019 18:57:46.059 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> ar.edu.iua.soa.cse.web.services.UserRESTController.delete(long)
+13-07-2019 18:57:46.060 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/check],methods=[GET]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.check(ar.edu.iua.soa.cse.model.User)
+13-07-2019 18:57:46.061 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<ar.edu.iua.soa.cse.model.User>> ar.edu.iua.soa.cse.web.services.UserRESTController.list()
+13-07-2019 18:57:46.065 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13-07-2019 18:57:46.066 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+13-07-2019 18:57:46.112 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:57:46.112 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 18:57:46.655 INFO  o.s.b.a.e.web.EndpointLinksResolver.<init> Exposing 2 endpoint(s) beneath base path '/actuator'
+13-07-2019 18:57:46.670 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+13-07-2019 18:57:46.671 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+13-07-2019 18:57:46.672 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13-07-2019 18:57:46.784 INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer LiveReload server is running on port 35729
+13-07-2019 18:57:46.855 INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated Registering beans for JMX exposure on startup
+13-07-2019 18:57:46.857 INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect Bean with name 'dataSource' has been autodetected for JMX exposure
+13-07-2019 18:57:46.865 INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+13-07-2019 18:57:46.920 INFO  o.s.b.w.e.tomcat.TomcatWebServer.start Tomcat started on port(s): 8093 (http) with context path ''
+13-07-2019 18:57:46.927 INFO  ar.edu.iua.soa.cse.CseApplication.logStarted Started CseApplication in 7.306 seconds (JVM running for 7.722)
+13-07-2019 18:57:56.429 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring FrameworkServlet 'dispatcherServlet'
+13-07-2019 18:57:56.430 INFO  o.s.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcherServlet': initialization started
+13-07-2019 18:57:56.453 INFO  o.s.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+13-07-2019 18:57:56.807 INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService HHH000397: Using ASTQueryTranslatorFactory
+13-07-2019 19:05:27.900 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@115689c7: startup date [Sat Jul 13 18:57:40 ART 2019]; root of context hierarchy
+13-07-2019 19:05:27.905 INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy Unregistering JMX-exposed beans on shutdown
+13-07-2019 19:05:27.906 INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans Unregistering JMX-exposed beans
+13-07-2019 19:05:27.908 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy Closing JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 19:05:27.911 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-1 - Shutdown initiated...
+13-07-2019 19:05:27.918 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-1 - Shutdown completed.
+13-07-2019 19:05:28.326 INFO  ar.edu.iua.soa.cse.CseApplication.logStarting Starting CseApplication on yamil with PID 9345 (/home/yamil/Documents/SOA/final/cse/target/classes started by yamil in /home/yamil/Documents/SOA/final/cse)
+13-07-2019 19:05:28.326 INFO  ar.edu.iua.soa.cse.CseApplication.logStartupProfileInfo No active profile set, falling back to default profiles: default
+13-07-2019 19:05:28.328 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@22504dfa: startup date [Sat Jul 13 19:05:28 ART 2019]; root of context hierarchy
+13-07-2019 19:05:28.874 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9ea2def0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13-07-2019 19:05:28.974 INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize Tomcat initialized with port(s): 8093 (http)
+13-07-2019 19:05:28.977 INFO  o.a.catalina.core.StandardService.log Starting service [Tomcat]
+13-07-2019 19:05:28.977 INFO  o.a.catalina.core.StandardEngine.log Starting Servlet Engine: Apache Tomcat/8.5.34
+13-07-2019 19:05:28.994 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring embedded WebApplicationContext
+13-07-2019 19:05:28.995 INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext Root WebApplicationContext: initialization completed in 667 ms
+13-07-2019 19:05:29.277 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'characterEncodingFilter' to: [/*]
+13-07-2019 19:05:29.278 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'webMvcMetricsFilter' to: [/*]
+13-07-2019 19:05:29.278 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+13-07-2019 19:05:29.278 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpPutFormContentFilter' to: [/*]
+13-07-2019 19:05:29.279 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'requestContextFilter' to: [/*]
+13-07-2019 19:05:29.279 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpTraceFilter' to: [/*]
+13-07-2019 19:05:29.279 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet dispatcherServlet mapped to [/]
+13-07-2019 19:05:29.279 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet webServlet mapped to [/h2-console/*]
+13-07-2019 19:05:29.321 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-2 - Starting...
+13-07-2019 19:05:29.331 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-2 - Start completed.
+13-07-2019 19:05:29.343 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory Building JPA container EntityManagerFactory for persistence unit 'default'
+13-07-2019 19:05:29.344 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+13-07-2019 19:05:29.360 INFO  org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+13-07-2019 19:05:29.414 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 19:05:29.571 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 19:05:29.671 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@22504dfa: startup date [Sat Jul 13 19:05:28 ART 2019]; root of context hierarchy
+13-07-2019 19:05:29.684 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-07-2019 19:05:29.696 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[POST]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.add(ar.edu.iua.soa.cse.model.User)
+13-07-2019 19:05:29.697 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.update(ar.edu.iua.soa.cse.model.User)
+13-07-2019 19:05:29.698 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.load(long)
+13-07-2019 19:05:29.698 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> ar.edu.iua.soa.cse.web.services.UserRESTController.delete(long)
+13-07-2019 19:05:29.699 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/check],methods=[GET]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.check(ar.edu.iua.soa.cse.model.User)
+13-07-2019 19:05:29.699 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<ar.edu.iua.soa.cse.model.User>> ar.edu.iua.soa.cse.web.services.UserRESTController.list()
+13-07-2019 19:05:29.702 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13-07-2019 19:05:29.703 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+13-07-2019 19:05:29.718 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 19:05:29.718 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 19:05:29.879 INFO  o.s.b.a.e.web.EndpointLinksResolver.<init> Exposing 2 endpoint(s) beneath base path '/actuator'
+13-07-2019 19:05:29.883 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+13-07-2019 19:05:29.884 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+13-07-2019 19:05:29.885 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13-07-2019 19:05:29.907 INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer LiveReload server is running on port 35729
+13-07-2019 19:05:29.938 INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated Registering beans for JMX exposure on startup
+13-07-2019 19:05:29.939 INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect Bean with name 'dataSource' has been autodetected for JMX exposure
+13-07-2019 19:05:29.945 INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+13-07-2019 19:05:29.971 INFO  o.s.b.w.e.tomcat.TomcatWebServer.start Tomcat started on port(s): 8093 (http) with context path ''
+13-07-2019 19:05:29.973 INFO  ar.edu.iua.soa.cse.CseApplication.logStarted Started CseApplication in 1.688 seconds (JVM running for 470.768)
+13-07-2019 19:05:29.980 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener.onApplicationEvent Condition evaluation unchanged
+13-07-2019 19:05:31.002 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@22504dfa: startup date [Sat Jul 13 19:05:28 ART 2019]; root of context hierarchy
+13-07-2019 19:05:31.005 INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy Unregistering JMX-exposed beans on shutdown
+13-07-2019 19:05:31.006 INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans Unregistering JMX-exposed beans
+13-07-2019 19:05:31.007 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy Closing JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 19:05:31.008 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-2 - Shutdown initiated...
+13-07-2019 19:05:31.018 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-2 - Shutdown completed.
+13-07-2019 19:19:40.060 INFO  ar.edu.iua.soa.cse.CseApplication.logStarting Starting CseApplication on yamil with PID 10279 (/home/yamil/Documents/SOA/final/cse/target/classes started by yamil in /home/yamil/Documents/SOA/final/cse)
+13-07-2019 19:19:40.062 INFO  ar.edu.iua.soa.cse.CseApplication.logStartupProfileInfo No active profile set, falling back to default profiles: default
+13-07-2019 19:19:40.127 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2a95b9fc: startup date [Sat Jul 13 19:19:40 ART 2019]; root of context hierarchy
+13-07-2019 19:19:42.229 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$19f25d99] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+13-07-2019 19:19:42.814 INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize Tomcat initialized with port(s): 8093 (http)
+13-07-2019 19:19:42.856 INFO  o.a.catalina.core.StandardService.log Starting service [Tomcat]
+13-07-2019 19:19:42.856 INFO  o.a.catalina.core.StandardEngine.log Starting Servlet Engine: Apache Tomcat/8.5.34
+13-07-2019 19:19:42.869 INFO  o.a.c.core.AprLifecycleListener.log The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+13-07-2019 19:19:43.089 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring embedded WebApplicationContext
+13-07-2019 19:19:43.090 INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext Root WebApplicationContext: initialization completed in 2963 ms
+13-07-2019 19:19:43.905 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'characterEncodingFilter' to: [/*]
+13-07-2019 19:19:43.906 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'webMvcMetricsFilter' to: [/*]
+13-07-2019 19:19:43.906 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+13-07-2019 19:19:43.906 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpPutFormContentFilter' to: [/*]
+13-07-2019 19:19:43.907 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'requestContextFilter' to: [/*]
+13-07-2019 19:19:43.907 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpTraceFilter' to: [/*]
+13-07-2019 19:19:43.907 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet dispatcherServlet mapped to [/]
+13-07-2019 19:19:43.909 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet webServlet mapped to [/h2-console/*]
+13-07-2019 19:19:44.052 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-1 - Starting...
+13-07-2019 19:19:44.416 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-1 - Start completed.
+13-07-2019 19:19:44.469 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory Building JPA container EntityManagerFactory for persistence unit 'default'
+13-07-2019 19:19:44.493 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+13-07-2019 19:19:44.627 INFO  org.hibernate.Version.logVersion HHH000412: Hibernate Core {5.2.17.Final}
+13-07-2019 19:19:44.629 INFO  org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+13-07-2019 19:19:44.677 INFO  o.h.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+13-07-2019 19:19:44.823 INFO  org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+13-07-2019 19:19:45.267 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory Initialized JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 19:19:45.834 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 19:19:46.139 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2a95b9fc: startup date [Sat Jul 13 19:19:40 ART 2019]; root of context hierarchy
+13-07-2019 19:19:46.199 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+13-07-2019 19:19:46.265 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[POST]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.add(ar.edu.iua.soa.cse.model.User)
+13-07-2019 19:19:46.266 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[PUT]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.update(ar.edu.iua.soa.cse.model.User)
+13-07-2019 19:19:46.267 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.load(long)
+13-07-2019 19:19:46.268 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.String> ar.edu.iua.soa.cse.web.services.UserRESTController.delete(long)
+13-07-2019 19:19:46.269 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user/check],methods=[GET]}" onto public org.springframework.http.ResponseEntity<ar.edu.iua.soa.cse.model.User> ar.edu.iua.soa.cse.web.services.UserRESTController.check(ar.edu.iua.soa.cse.model.User)
+13-07-2019 19:19:46.269 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/cse/v1/user],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<ar.edu.iua.soa.cse.model.User>> ar.edu.iua.soa.cse.web.services.UserRESTController.list()
+13-07-2019 19:19:46.274 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13-07-2019 19:19:46.275 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+13-07-2019 19:19:46.321 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 19:19:46.322 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+13-07-2019 19:19:46.867 INFO  o.s.b.a.e.web.EndpointLinksResolver.<init> Exposing 2 endpoint(s) beneath base path '/actuator'
+13-07-2019 19:19:46.881 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+13-07-2019 19:19:46.883 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+13-07-2019 19:19:46.884 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+13-07-2019 19:19:46.990 INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer LiveReload server is running on port 35729
+13-07-2019 19:19:47.066 INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated Registering beans for JMX exposure on startup
+13-07-2019 19:19:47.068 INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect Bean with name 'dataSource' has been autodetected for JMX exposure
+13-07-2019 19:19:47.077 INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+13-07-2019 19:19:47.144 INFO  o.s.b.w.e.tomcat.TomcatWebServer.start Tomcat started on port(s): 8093 (http) with context path ''
+13-07-2019 19:19:47.153 INFO  ar.edu.iua.soa.cse.CseApplication.logStarted Started CseApplication in 7.549 seconds (JVM running for 8.0)
+13-07-2019 19:20:00.765 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring FrameworkServlet 'dispatcherServlet'
+13-07-2019 19:20:00.766 INFO  o.s.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcherServlet': initialization started
+13-07-2019 19:20:00.787 INFO  o.s.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+13-07-2019 19:20:01.173 INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService HHH000397: Using ASTQueryTranslatorFactory
+13-07-2019 19:24:15.180 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2a95b9fc: startup date [Sat Jul 13 19:19:40 ART 2019]; root of context hierarchy
+13-07-2019 19:24:15.185 INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy Unregistering JMX-exposed beans on shutdown
+13-07-2019 19:24:15.187 INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans Unregistering JMX-exposed beans
+13-07-2019 19:24:15.190 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy Closing JPA EntityManagerFactory for persistence unit 'default'
+13-07-2019 19:24:15.199 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-1 - Shutdown initiated...
+13-07-2019 19:24:15.210 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-1 - Shutdown completed.

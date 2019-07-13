@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Backend</title>
+<link href="lib/bootstrap/dist/css/bootstrap.min.css" 
+	rel="stylesheet">
+<link href="lib/bootstrap/dist/css/bootstrap-theme.min.css" 
+	rel="stylesheet">
+
+<script src="lib/jquery/dist/jquery.min.js" 
+	type="text/javascript"></script>
+<script src="lib/angular/angular.min.js" 
+	type="text/javascript"></script>
+<script src="app.js" 
+	type="text/javascript"></script>
+<script src="controllers/div1.controller.js" 
+	type="text/javascript"></script>
+<script src="controllers/div2.controller.js" 
+	type="text/javascript"></script>
+<script src="services/productos.service.js" 
+	type="text/javascript"></script>	
+</head>
+<body ng-app="frontend">
+{{ 1 + 2 + 3}}
+
+<div ng-controller="div1Controller">
+{{titulo}}
+
+<input type="number" ng-model="numero">
+<span style="font-size: {{numero}}px">{{numero}}</span>
+<br/>
+
+<hr/>
+Descripcion: <input type="text" ng-model="enblanco.producto"> - 
+Precio: <input type="number" ng-model="enblanco.precio">
+<button ng-click="agregar()" >Agregar</button>
+<hr/>
+Buscar: <input type="text" ng-model="search">
+<ul>
+<li ng-repeat="p in productos.datos  | filter:search track by $index">
+	{{p.producto}}  - 
+	<input type="number" ng-model="p.precio"> - 
+	<button ng-click="eliminar(p)" >Eliminar</button>
+</li>
+</ul>
+ 
+{{productos.datos.length}} productos en la lista
+<br/>
+${{productos.sumaTotal()}} en total
+<hr/>
+
+
+
+
+</div>
+<div ng-controller="div2Controller">
+{{titulo}}
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
