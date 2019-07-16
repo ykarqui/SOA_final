@@ -25,7 +25,7 @@ public class AuthToken implements Serializable {
 	public static String TYPE_REQUEST_LIMIT = "REQUEST_LIMIT";
 	public static String TYPE_TO_DATE = "TO_DATE";
 
-	@Column(name="desde", columnDefinition = "datetime DEFAULT NULL")
+	@Column(name="begin", columnDefinition = "datetime DEFAULT NULL")
 	private Date from;
 
 	@Column(columnDefinition = "datetime DEFAULT NULL")
@@ -41,12 +41,12 @@ public class AuthToken implements Serializable {
 	@Id
 	private String series;
 
-	@Column(name="hasta", columnDefinition = "datetime DEFAULT NULL")
+	@Column(name="end", columnDefinition = "datetime DEFAULT NULL")
 	private Date to;
 
 	private String token;
 
-	@Column(name="tipo")
+	@Column(name="type")
 	private String type;
 
 	private String username;

@@ -26,7 +26,8 @@ public class BaseRestService {
 	protected ResponseEntity<Object> genToken(String username, int diasvalido) {
 		try {
 			AuthToken token = buildToken(username, diasvalido);
-			return new ResponseEntity<Object>("{\"token\":\"" + token.encodeCookieValue() + "\"}", HttpStatus.OK);
+			return new ResponseEntity<Object>("{" + "\"username\":\"" + token.getUsername() + "\","
+					+ "\"token\":\"" + token.encodeCookieValue() + "\"}", HttpStatus.OK);
 		} catch (BusinessException e) {
 			log.error(e.getMessage(), e);
 			return new ResponseEntity<Object>(HttpStatus.INTERNAL_SERVER_ERROR);
@@ -34,10 +35,12 @@ public class BaseRestService {
 	}
 
 	protected AuthToken buildToken(String username, int diasvalido) throws BusinessException {
-		Calendar c = Calendar.getInstance();
-		c.setTime(new Date());
-		c.add(Calendar.DATE, diasvalido);
-		AuthToken token = new AuthToken(username, c.getTime());
+		Calendar f = Calendar.getInstance();
+		Calendar t = Calendar.getInstance();
+		f.setTime(new Date());
+		t.setTime(new Date());
+		t.add(Calendar.DATE, diasvalido);
+		AuthToken token = new AuthToken(username, f.getTime(), t.getTime());
 		authTokenService.save(token);
 		return token;
 	}
