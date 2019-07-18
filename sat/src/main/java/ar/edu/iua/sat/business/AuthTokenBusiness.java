@@ -1,14 +1,12 @@
 package ar.edu.iua.sat.business;
 
-import java.security.InvalidParameterException;
 import java.util.Base64;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Optional;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 
 import ar.edu.iua.sat.model.AuthToken;
 import ar.edu.iua.sat.persistence.AuthTokenRespository;
@@ -16,7 +14,7 @@ import ar.edu.iua.sat.persistence.AuthTokenRespository;
 
 @Service
 public class AuthTokenBusiness implements IAuthTokenBusiness {
-	private Logger log = LoggerFactory.getLogger(this.getClass());
+	//private Logger log = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
 	private AuthTokenRespository authTokenDAO;
@@ -31,17 +29,30 @@ public class AuthTokenBusiness implements IAuthTokenBusiness {
 	}
 	
 	@Override
-	public AuthToken check(String username, String token) throws BusinessException{
-		AuthToken at;
+	public void check(String username, String token)
+			throws BusinessException, NotFoundException, ExpiredTokenException, InvalidCookieData{
+		Optional<AuthToken> atO;
+		String[] data;
 		try {
-			at = authTokenDAO.findByUsernameAndToken(username, token);
-			System.out.println(at);
+			data = decodeCookie(token);
+			atO = authTokenDAO.findById(data[0]);
 		} catch (Exception e) {
-			System.out.println("Catch business");
-			log.error(e.getMessage());
 			throw new BusinessException(e);
 		}
-		return at;
+		if (!atO.isPresent())
+			throw new NotFoundException("No se encuentra el token de autenticación serie=" + username);
+		AuthToken at = atO.get();
+		if(at.getUsername().equals(username)&&at.getToken().equals(data[1])) {
+			Calendar today = Calendar.getInstance();
+			today.setTime(new Date());
+			if(today.getTime().compareTo(at.getTo())<0) {
+				System.out.println("TOKEN VALIDO!");
+			} else {
+				throw new ExpiredTokenException();
+			}
+		} else {
+			throw new InvalidCookieData();
+		}
 	}
 
 	@Override
@@ -64,6 +75,10 @@ public class AuthTokenBusiness implements IAuthTokenBusiness {
 		} catch (Exception e) {
 			throw new BusinessException(e);
 		}
-
+	}
+	
+	private String[] decodeCookie(String cookie) {
+		StringBuilder dsb = new StringBuilder(new String(Base64.getDecoder().decode(cookie.getBytes())));
+		return dsb.toString().split(":");
 	}
 }

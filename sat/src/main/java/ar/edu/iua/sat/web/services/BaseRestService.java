@@ -14,7 +14,9 @@ import org.springframework.http.ResponseEntity;
 
 import ar.edu.iua.sat.business.BusinessException;
 import ar.edu.iua.sat.business.CheckBasicAuthorization;
+import ar.edu.iua.sat.business.ExpiredTokenException;
 import ar.edu.iua.sat.business.IAuthTokenBusiness;
+import ar.edu.iua.sat.business.InvalidCookieData;
 import ar.edu.iua.sat.business.NotFoundException;
 import ar.edu.iua.sat.model.AuthToken;
 
@@ -55,6 +57,12 @@ public class BaseRestService {
 		} catch (NotFoundException nf) {
 			log.error("NotFound");
 			return new ResponseEntity<Object>(HttpStatus.NOT_FOUND);
+		} catch (ExpiredTokenException et) {
+			log.error("Expired");
+			return new ResponseEntity<Object>(HttpStatus.UNAUTHORIZED);
+		} catch (InvalidCookieData icd) {
+			log.error("Invalid");
+			return new ResponseEntity<Object>(HttpStatus.BAD_REQUEST);
 		}
 	}
 

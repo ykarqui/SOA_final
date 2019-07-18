@@ -15,14 +15,12 @@ public class CoreRestService extends BaseRestService {
 	
 	@PostMapping(value = Constants.URL_TOKEN)
 	public ResponseEntity<Object> getToken(@RequestBody UserDTO user, @RequestHeader("Authorization") String auth) {
-		System.out.println("Authorization: " + auth);
 		return genToken(user.getUsername(), user.getDays(), auth);
 	}
 	
 	@GetMapping(value = Constants.URL_TOKEN)
 	public ResponseEntity<Object> verifyToken(@RequestHeader("username") String username,
 			@RequestHeader("auth-token") String token) {
-		System.out.println("Llego");
 		return checkToken(username, token);
 	}
 

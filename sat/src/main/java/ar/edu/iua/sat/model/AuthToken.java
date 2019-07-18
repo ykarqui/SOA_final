@@ -138,11 +138,12 @@ public class AuthToken implements Serializable {
 		String value = sb.toString();
 
 		sb = new StringBuilder(new String(Base64.getEncoder().encode(value.getBytes())));
-
 		while (sb.charAt(sb.length() - 1) == '=') {
 			sb.deleteCharAt(sb.length() - 1);
 		}
-
+		System.out.println("Cookie codificada: " + sb.toString());
+		StringBuilder dsb = new StringBuilder(new String(Base64.getDecoder().decode(sb.toString().getBytes())));
+		System.out.println("Cookie Decodificada: " + dsb.toString());
 		return sb.toString();
 	}
 
@@ -283,7 +284,7 @@ public class AuthToken implements Serializable {
 		}
 		try {
 			String cookieAsPlainText = new String(Base64.getDecoder().decode(token.getBytes()));
-
+			System.out.println("Cookie As Plain Text: " + cookieAsPlainText);
 			String[] tokens = StringUtils.delimitedListToStringArray(cookieAsPlainText, DELIMITER);
 
 			if ((tokens[0].equalsIgnoreCase("http") || tokens[0].equalsIgnoreCase("https"))
