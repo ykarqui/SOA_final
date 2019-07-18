@@ -24,6 +24,8 @@ public class User {
 	private String username;
 	@Column(length=255, nullable=false)
 	private String password;
+	@Column(length=255, nullable=true)
+	private String token;
 	
 	public long getIdUser() {
 		return idUser;
@@ -60,5 +62,11 @@ public class User {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public String getToken() {
+		return password;
+	}
+	public void setToken(String token) {
+		this.token = token;
 	}
 }

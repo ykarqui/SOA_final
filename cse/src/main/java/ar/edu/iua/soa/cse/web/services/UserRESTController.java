@@ -19,6 +19,7 @@ import ar.edu.iua.soa.cse.business.BusinessException;
 import ar.edu.iua.soa.cse.business.IUserBusiness;
 import ar.edu.iua.soa.cse.business.NotFoundException;
 import ar.edu.iua.soa.cse.model.User;
+import ar.edu.iua.soa.cse.model.dto.UserDTO;
 
 @RestController
 @RequestMapping(Constants.URL_USER)
@@ -50,6 +51,17 @@ public class UserRESTController {
 	public ResponseEntity<User> check(@RequestBody User user) {
 		try {
 			return new ResponseEntity<User>(userBusiness.check(user), HttpStatus.OK);
+		} catch (BusinessException e) {
+			return new ResponseEntity<User>(HttpStatus.INTERNAL_SERVER_ERROR);
+		} catch (NotFoundException e) {
+			return new ResponseEntity<User>(HttpStatus.NOT_FOUND);
+		}
+	}
+	
+	@GetMapping("/token")
+	public ResponseEntity<User> checkToken(@RequestBody UserDTO user) {
+		try {
+			return new ResponseEntity<User>(userBusiness.checkToken(user), HttpStatus.OK);
 		} catch (BusinessException e) {
 			return new ResponseEntity<User>(HttpStatus.INTERNAL_SERVER_ERROR);
 		} catch (NotFoundException e) {

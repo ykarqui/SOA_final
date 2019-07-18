@@ -2,17 +2,28 @@ package ar.edu.iua.sat.web.services;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
+
+import ar.edu.iua.sat.model.dto.UserDTO;
 
 
 @RestController
 public class CoreRestService extends BaseRestService {
-
+	
+	@PostMapping(value = Constants.URL_TOKEN)
+	public ResponseEntity<Object> getToken(@RequestBody UserDTO user, @RequestHeader("Authorization") String auth) {
+		System.out.println("Authorization: " + auth);
+		return genToken(user.getUsername(), user.getDays(), auth);
+	}
+	
 	@GetMapping(value = Constants.URL_TOKEN)
-	public ResponseEntity<Object> getToken(@RequestParam("username") String username,
-			@RequestParam("days") int diasvalido) {
-		return genToken(username, diasvalido);
+	public ResponseEntity<Object> verifyToken(@RequestHeader("username") String username,
+			@RequestHeader("auth-token") String token) {
+		System.out.println("Llego");
+		return checkToken(username, token);
 	}
 
 }
