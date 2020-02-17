@@ -1,0 +1,170 @@
+16-02-2020 12:29:14.916 INFO  ar.edu.iua.sat.SatApplication.logStarting Starting SatApplication on santiago-X555LD with PID 13575 (/home/santiago/Informatica/repos/karqui/SOA_final/sat/target/classes started by santiago in /home/santiago/Informatica/repos/karqui/SOA_final/sat)
+16-02-2020 12:29:14.935 INFO  ar.edu.iua.sat.SatApplication.logStartupProfileInfo No active profile set, falling back to default profiles: default
+16-02-2020 12:29:15.094 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6ed8132a: startup date [Sun Feb 16 12:29:15 ART 2020]; root of context hierarchy
+16-02-2020 12:29:18.030 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3cac3332] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16-02-2020 12:29:18.933 INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize Tomcat initialized with port(s): 8094 (http)
+16-02-2020 12:29:18.977 INFO  o.a.catalina.core.StandardService.log Starting service [Tomcat]
+16-02-2020 12:29:18.977 INFO  o.a.catalina.core.StandardEngine.log Starting Servlet Engine: Apache Tomcat/8.5.34
+16-02-2020 12:29:18.991 INFO  o.a.c.core.AprLifecycleListener.log The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+16-02-2020 12:29:19.216 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring embedded WebApplicationContext
+16-02-2020 12:29:19.218 INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext Root WebApplicationContext: initialization completed in 4124 ms
+16-02-2020 12:29:20.262 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'characterEncodingFilter' to: [/*]
+16-02-2020 12:29:20.263 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'webMvcMetricsFilter' to: [/*]
+16-02-2020 12:29:20.264 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+16-02-2020 12:29:20.264 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpPutFormContentFilter' to: [/*]
+16-02-2020 12:29:20.264 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'requestContextFilter' to: [/*]
+16-02-2020 12:29:20.265 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpTraceFilter' to: [/*]
+16-02-2020 12:29:20.265 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet dispatcherServlet mapped to [/]
+16-02-2020 12:29:20.267 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet webServlet mapped to [/h2-console/*]
+16-02-2020 12:29:20.454 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-1 - Starting...
+16-02-2020 12:29:21.575 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-1 - Start completed.
+16-02-2020 12:29:21.625 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory Building JPA container EntityManagerFactory for persistence unit 'default'
+16-02-2020 12:29:21.688 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+16-02-2020 12:29:21.811 INFO  org.hibernate.Version.logVersion HHH000412: Hibernate Core {5.2.17.Final}
+16-02-2020 12:29:21.814 INFO  org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+16-02-2020 12:29:22.040 INFO  o.h.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+16-02-2020 12:29:22.272 INFO  org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+16-02-2020 12:29:23.230 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory Initialized JPA EntityManagerFactory for persistence unit 'default'
+16-02-2020 12:29:24.027 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16-02-2020 12:29:24.748 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6ed8132a: startup date [Sun Feb 16 12:29:15 ART 2020]; root of context hierarchy
+16-02-2020 12:29:24.924 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16-02-2020 12:29:25.058 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/sat/v1/authtoken],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> ar.edu.iua.sat.web.services.CoreRestService.getToken(ar.edu.iua.sat.model.dto.UserDTO,java.lang.String)
+16-02-2020 12:29:25.061 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/sat/v1/authtoken],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> ar.edu.iua.sat.web.services.CoreRestService.verifyToken(java.lang.String,java.lang.String)
+16-02-2020 12:29:25.150 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+16-02-2020 12:29:25.153 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+16-02-2020 12:29:25.297 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16-02-2020 12:29:25.298 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16-02-2020 12:29:26.600 INFO  o.s.b.a.e.web.EndpointLinksResolver.<init> Exposing 2 endpoint(s) beneath base path '/actuator'
+16-02-2020 12:29:26.616 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+16-02-2020 12:29:26.617 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+16-02-2020 12:29:26.619 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+16-02-2020 12:29:26.766 INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer LiveReload server is running on port 35729
+16-02-2020 12:29:26.946 INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated Registering beans for JMX exposure on startup
+16-02-2020 12:29:26.948 INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect Bean with name 'dataSource' has been autodetected for JMX exposure
+16-02-2020 12:29:26.959 INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+16-02-2020 12:29:27.518 INFO  o.s.b.w.e.tomcat.TomcatWebServer.start Tomcat started on port(s): 8094 (http) with context path ''
+16-02-2020 12:29:27.523 INFO  ar.edu.iua.sat.SatApplication.logStarted Started SatApplication in 13.202 seconds (JVM running for 14.581)
+16-02-2020 12:30:25.265 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6ed8132a: startup date [Sun Feb 16 12:29:15 ART 2020]; root of context hierarchy
+16-02-2020 12:30:25.287 INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy Unregistering JMX-exposed beans on shutdown
+16-02-2020 12:30:25.288 INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans Unregistering JMX-exposed beans
+16-02-2020 12:30:25.300 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy Closing JPA EntityManagerFactory for persistence unit 'default'
+16-02-2020 12:30:25.305 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-1 - Shutdown initiated...
+16-02-2020 12:30:25.329 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-1 - Shutdown completed.
+16-02-2020 18:11:56.363 INFO  ar.edu.iua.sat.SatApplication.logStarting Starting SatApplication on santiago-X555LD with PID 9366 (/home/santiago/Informatica/repos/karqui/SOA_final/sat/target/classes started by santiago in /home/santiago/Informatica/repos/karqui/SOA_final/sat)
+16-02-2020 18:11:56.392 INFO  ar.edu.iua.sat.SatApplication.logStartupProfileInfo No active profile set, falling back to default profiles: default
+16-02-2020 18:11:56.607 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6f96f674: startup date [Sun Feb 16 18:11:56 ART 2020]; root of context hierarchy
+16-02-2020 18:12:01.072 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ab2d4bff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16-02-2020 18:12:02.214 INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize Tomcat initialized with port(s): 8094 (http)
+16-02-2020 18:12:02.309 INFO  o.a.catalina.core.StandardService.log Starting service [Tomcat]
+16-02-2020 18:12:02.310 INFO  o.a.catalina.core.StandardEngine.log Starting Servlet Engine: Apache Tomcat/8.5.34
+16-02-2020 18:12:02.323 INFO  o.a.c.core.AprLifecycleListener.log The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+16-02-2020 18:12:02.576 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring embedded WebApplicationContext
+16-02-2020 18:12:02.577 INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext Root WebApplicationContext: initialization completed in 5970 ms
+16-02-2020 18:12:03.614 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'characterEncodingFilter' to: [/*]
+16-02-2020 18:12:03.615 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'webMvcMetricsFilter' to: [/*]
+16-02-2020 18:12:03.615 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+16-02-2020 18:12:03.616 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpPutFormContentFilter' to: [/*]
+16-02-2020 18:12:03.616 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'requestContextFilter' to: [/*]
+16-02-2020 18:12:03.616 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpTraceFilter' to: [/*]
+16-02-2020 18:12:03.616 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet dispatcherServlet mapped to [/]
+16-02-2020 18:12:03.618 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet webServlet mapped to [/h2-console/*]
+16-02-2020 18:12:03.964 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-1 - Starting...
+16-02-2020 18:12:04.678 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-1 - Start completed.
+16-02-2020 18:12:04.780 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory Building JPA container EntityManagerFactory for persistence unit 'default'
+16-02-2020 18:12:04.876 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+16-02-2020 18:12:05.221 INFO  org.hibernate.Version.logVersion HHH000412: Hibernate Core {5.2.17.Final}
+16-02-2020 18:12:05.232 INFO  org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+16-02-2020 18:12:05.333 INFO  o.h.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+16-02-2020 18:12:05.647 INFO  org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+16-02-2020 18:12:07.042 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory Initialized JPA EntityManagerFactory for persistence unit 'default'
+16-02-2020 18:12:08.052 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16-02-2020 18:12:08.405 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6f96f674: startup date [Sun Feb 16 18:11:56 ART 2020]; root of context hierarchy
+16-02-2020 18:12:08.506 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16-02-2020 18:12:08.583 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/sat/v1/authtoken],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> ar.edu.iua.sat.web.services.CoreRestService.getToken(ar.edu.iua.sat.model.dto.UserDTO,java.lang.String)
+16-02-2020 18:12:08.585 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/sat/v1/authtoken],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> ar.edu.iua.sat.web.services.CoreRestService.verifyToken(java.lang.String,java.lang.String)
+16-02-2020 18:12:08.591 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+16-02-2020 18:12:08.592 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+16-02-2020 18:12:08.649 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16-02-2020 18:12:08.649 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16-02-2020 18:12:09.852 INFO  o.s.b.a.e.web.EndpointLinksResolver.<init> Exposing 2 endpoint(s) beneath base path '/actuator'
+16-02-2020 18:12:09.869 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+16-02-2020 18:12:09.870 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+16-02-2020 18:12:09.871 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+16-02-2020 18:12:09.991 INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer LiveReload server is running on port 35729
+16-02-2020 18:12:10.062 INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated Registering beans for JMX exposure on startup
+16-02-2020 18:12:10.064 INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect Bean with name 'dataSource' has been autodetected for JMX exposure
+16-02-2020 18:12:10.073 INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+16-02-2020 18:12:10.184 INFO  o.s.b.w.e.tomcat.TomcatWebServer.start Tomcat started on port(s): 8094 (http) with context path ''
+16-02-2020 18:12:10.189 INFO  ar.edu.iua.sat.SatApplication.logStarted Started SatApplication in 15.409 seconds (JVM running for 16.546)
+16-02-2020 18:14:17.710 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring FrameworkServlet 'dispatcherServlet'
+16-02-2020 18:14:17.710 INFO  o.s.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcherServlet': initialization started
+16-02-2020 18:14:17.743 INFO  o.s.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
+16-02-2020 18:14:17.971 ERROR a.e.i.s.web.services.CoreRestService.checkToken Invalid
+16-02-2020 18:15:46.597 ERROR a.e.i.s.web.services.CoreRestService.checkToken Invalid
+16-02-2020 18:16:36.746 ERROR a.e.i.s.web.services.CoreRestService.checkToken Invalid
+16-02-2020 18:18:42.148 ERROR a.e.i.s.web.services.CoreRestService.checkToken Expired
+16-02-2020 18:22:39.205 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException Resolved exception caused by handler execution: org.springframework.web.bind.ServletRequestBindingException: Missing request header 'username' for method parameter of type String
+16-02-2020 19:40:56.971 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6f96f674: startup date [Sun Feb 16 18:11:56 ART 2020]; root of context hierarchy
+16-02-2020 19:40:57.054 INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy Unregistering JMX-exposed beans on shutdown
+16-02-2020 19:40:57.056 INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans Unregistering JMX-exposed beans
+16-02-2020 19:40:57.060 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy Closing JPA EntityManagerFactory for persistence unit 'default'
+16-02-2020 19:40:57.128 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-1 - Shutdown initiated...
+16-02-2020 19:40:57.136 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-1 - Shutdown completed.
+16-02-2020 21:12:28.629 INFO  ar.edu.iua.sat.SatApplication.logStarting Starting SatApplication on santiago-X555LD with PID 5844 (/home/santiago/Informatica/repos/karqui/SOA_final/sat/target/classes started by santiago in /home/santiago/Informatica/repos/karqui/SOA_final/sat)
+16-02-2020 21:12:28.656 INFO  ar.edu.iua.sat.SatApplication.logStartupProfileInfo No active profile set, falling back to default profiles: default
+16-02-2020 21:12:28.877 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@79152427: startup date [Sun Feb 16 21:12:28 ART 2020]; root of context hierarchy
+16-02-2020 21:12:33.993 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2a73e0d6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+16-02-2020 21:12:35.685 INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize Tomcat initialized with port(s): 8094 (http)
+16-02-2020 21:12:35.804 INFO  o.a.catalina.core.StandardService.log Starting service [Tomcat]
+16-02-2020 21:12:35.804 INFO  o.a.catalina.core.StandardEngine.log Starting Servlet Engine: Apache Tomcat/8.5.34
+16-02-2020 21:12:35.851 INFO  o.a.c.core.AprLifecycleListener.log The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+16-02-2020 21:12:36.424 INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log Initializing Spring embedded WebApplicationContext
+16-02-2020 21:12:36.424 INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext Root WebApplicationContext: initialization completed in 7547 ms
+16-02-2020 21:12:38.004 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'characterEncodingFilter' to: [/*]
+16-02-2020 21:12:38.005 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'webMvcMetricsFilter' to: [/*]
+16-02-2020 21:12:38.005 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+16-02-2020 21:12:38.005 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpPutFormContentFilter' to: [/*]
+16-02-2020 21:12:38.006 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'requestContextFilter' to: [/*]
+16-02-2020 21:12:38.006 INFO  o.s.b.w.s.FilterRegistrationBean.configure Mapping filter: 'httpTraceFilter' to: [/*]
+16-02-2020 21:12:38.006 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet dispatcherServlet mapped to [/]
+16-02-2020 21:12:38.016 INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration Servlet webServlet mapped to [/h2-console/*]
+16-02-2020 21:12:38.310 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-1 - Starting...
+16-02-2020 21:12:39.912 INFO  com.zaxxer.hikari.HikariDataSource.getConnection HikariPool-1 - Start completed.
+16-02-2020 21:12:40.206 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory Building JPA container EntityManagerFactory for persistence unit 'default'
+16-02-2020 21:12:40.315 INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+16-02-2020 21:12:40.643 INFO  org.hibernate.Version.logVersion HHH000412: Hibernate Core {5.2.17.Final}
+16-02-2020 21:12:40.655 INFO  org.hibernate.cfg.Environment.<clinit> HHH000206: hibernate.properties not found
+16-02-2020 21:12:40.867 INFO  o.h.annotations.common.Version.<clinit> HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+16-02-2020 21:12:41.308 INFO  org.hibernate.dialect.Dialect.<init> HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+16-02-2020 21:12:42.948 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory Initialized JPA EntityManagerFactory for persistence unit 'default'
+16-02-2020 21:12:44.184 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16-02-2020 21:12:44.842 INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@79152427: startup date [Sun Feb 16 21:12:28 ART 2020]; root of context hierarchy
+16-02-2020 21:12:44.973 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+16-02-2020 21:12:45.133 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/sat/v1/authtoken],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> ar.edu.iua.sat.web.services.CoreRestService.getToken(ar.edu.iua.sat.model.dto.UserDTO,java.lang.String)
+16-02-2020 21:12:45.140 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/sat/v1/authtoken],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> ar.edu.iua.sat.web.services.CoreRestService.verifyToken(java.lang.String,java.lang.String)
+16-02-2020 21:12:45.152 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+16-02-2020 21:12:45.153 INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+16-02-2020 21:12:45.210 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16-02-2020 21:12:45.210 INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+16-02-2020 21:12:46.607 INFO  o.s.b.a.e.web.EndpointLinksResolver.<init> Exposing 2 endpoint(s) beneath base path '/actuator'
+16-02-2020 21:12:46.625 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+16-02-2020 21:12:46.627 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+16-02-2020 21:12:46.629 INFO  o.s.b.a.e.w.s.WebMvcEndpointHandlerMapping.register Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+16-02-2020 21:12:46.764 WARN  o.s.b.d.a.OptionalLiveReloadServer.startServer Unable to start LiveReload server
+16-02-2020 21:12:46.863 INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated Registering beans for JMX exposure on startup
+16-02-2020 21:12:46.866 INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect Bean with name 'dataSource' has been autodetected for JMX exposure
+16-02-2020 21:12:46.876 INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+16-02-2020 21:12:46.926 INFO  o.s.b.w.e.tomcat.TomcatWebServer.start Tomcat started on port(s): 8094 (http) with context path ''
+16-02-2020 21:12:46.931 INFO  ar.edu.iua.sat.SatApplication.logStarted Started SatApplication in 19.66 seconds (JVM running for 20.892)
+16-02-2020 21:40:18.248 INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@79152427: startup date [Sun Feb 16 21:12:28 ART 2020]; root of context hierarchy
+16-02-2020 21:40:18.270 INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy Unregistering JMX-exposed beans on shutdown
+16-02-2020 21:40:18.273 INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans Unregistering JMX-exposed beans
+16-02-2020 21:40:18.275 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy Closing JPA EntityManagerFactory for persistence unit 'default'
+16-02-2020 21:40:18.277 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-1 - Shutdown initiated...
+16-02-2020 21:40:18.293 INFO  com.zaxxer.hikari.HikariDataSource.close HikariPool-1 - Shutdown completed.
