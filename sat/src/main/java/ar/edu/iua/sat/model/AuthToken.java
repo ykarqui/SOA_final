@@ -141,9 +141,6 @@ public class AuthToken implements Serializable {
 		while (sb.charAt(sb.length() - 1) == '=') {
 			sb.deleteCharAt(sb.length() - 1);
 		}
-		System.out.println("Cookie codificada: " + sb.toString());
-		StringBuilder dsb = new StringBuilder(new String(Base64.getDecoder().decode(sb.toString().getBytes())));
-		System.out.println("Cookie Decodificada: " + dsb.toString());
 		return sb.toString();
 	}
 

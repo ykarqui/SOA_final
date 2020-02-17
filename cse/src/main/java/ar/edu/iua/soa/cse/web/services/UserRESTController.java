@@ -19,6 +19,7 @@ import ar.edu.iua.soa.cse.business.BusinessException;
 import ar.edu.iua.soa.cse.business.IUserBusiness;
 import ar.edu.iua.soa.cse.business.NotFoundException;
 import ar.edu.iua.soa.cse.model.User;
+import ar.edu.iua.soa.cse.model.dto.LoginDTO;
 import ar.edu.iua.soa.cse.model.dto.UserDTO;
 
 @RestController
@@ -47,10 +48,22 @@ public class UserRESTController {
 		}
 	}
 	
-	@GetMapping("/check")
-	public ResponseEntity<User> check(@RequestBody User user) {
+	@GetMapping("/login")
+	public ResponseEntity<User> login(@RequestBody LoginDTO user) {
 		try {
 			return new ResponseEntity<User>(userBusiness.check(user), HttpStatus.OK);
+		} catch (BusinessException e) {
+			return new ResponseEntity<User>(HttpStatus.INTERNAL_SERVER_ERROR);
+		} catch (NotFoundException e) {
+			return new ResponseEntity<User>(HttpStatus.NOT_FOUND);
+		}
+	}
+	
+	@GetMapping("/mosquitto")
+	public ResponseEntity<User> listen(@RequestBody User user) {
+		try {
+			userBusiness.listen(user);
+			return new ResponseEntity<User>(HttpStatus.OK);
 		} catch (BusinessException e) {
 			return new ResponseEntity<User>(HttpStatus.INTERNAL_SERVER_ERROR);
 		} catch (NotFoundException e) {

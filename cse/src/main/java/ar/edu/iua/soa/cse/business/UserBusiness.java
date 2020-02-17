@@ -19,6 +19,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import ar.edu.iua.soa.cse.model.User;
+import ar.edu.iua.soa.cse.model.dto.LoginDTO;
 import ar.edu.iua.soa.cse.model.dto.UserDTO;
 import ar.edu.iua.soa.cse.persistence.UserRepository;
 
@@ -46,11 +47,10 @@ public class UserBusiness implements IUserBusiness {
 	}
 	
 	@Override
-	public User check(User user) throws BusinessException, NotFoundException {
+	public User check(LoginDTO user) throws BusinessException, NotFoundException {
 		User o;
 		try {
 			o = userDAO.findByUsername(user.getUsername());
-			System.out.println("Usuario: " + o.getUsername());
 		} catch (Exception e) {
 			throw new BusinessException(e);
 		}
@@ -60,6 +60,17 @@ public class UserBusiness implements IUserBusiness {
 			}
 		}
 		throw new NotFoundException();
+	}
+	
+	@Override
+	public void listen(User user) throws BusinessException, NotFoundException {
+		try {
+			System.out.println("Iniciando subscripcion");
+			MqttSubscriber subscriber = new MqttSubscriber();
+			subscriber.startSubscription();
+		} catch (Exception e) {
+			throw new BusinessException(e);
+		}
 	}
 	
 	@Override

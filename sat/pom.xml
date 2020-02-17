@@ -12,6 +12,7 @@
 	<artifactId>sat</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>sat</name>
+	<packaging>jar</packaging>
 	<description>Sistema de autenticación por token. (SAT)</description>
 
 	<properties>
@@ -70,13 +71,32 @@
         	<groupId>org.springframework.security</groupId>
         	<artifactId>spring-security-crypto</artifactId>
     	</dependency>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-lambda-java-core</artifactId>
+			<version>1.2.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+		      <!-- Build an executable JAR -->
+		      <groupId>org.apache.maven.plugins</groupId>
+		      <artifactId>maven-jar-plugin</artifactId>
+		      <configuration>
+		        <archive>
+		          <manifest>
+		            <addClasspath>true</addClasspath>
+		            <classpathPrefix>lib/</classpathPrefix>
+		            <mainClass>ar.edu.iua.sat.SatApplication</mainClass>
+		          </manifest>
+		        </archive>
+		      </configuration>
+		    </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
