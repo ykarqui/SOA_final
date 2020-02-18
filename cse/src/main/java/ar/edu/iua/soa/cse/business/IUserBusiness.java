@@ -15,5 +15,6 @@ public interface IUserBusiness {
 	public User load(String usernameOrEmail) throws BusinessException, NotFoundException;
 	public User check(LoginDTO user) throws BusinessException, NotFoundException;
 	User checkToken(UserDTO user) throws BusinessException, NotFoundException;
-	void listen(User user) throws BusinessException, NotFoundException;
+	public void listen(User user) throws BusinessException, NotFoundException;
+	public void off(User user)throws BusinessException, NotFoundException;
 }

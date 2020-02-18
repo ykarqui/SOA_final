@@ -31,6 +31,8 @@ public class UserBusiness implements IUserBusiness {
 	
 	@Autowired
 	private PasswordEncoder pe;
+	
+	private MqttSubscriber subscriber;
 
 	@Override
 	public User load(long id) throws BusinessException, NotFoundException {
@@ -49,6 +51,7 @@ public class UserBusiness implements IUserBusiness {
 	@Override
 	public User check(LoginDTO user) throws BusinessException, NotFoundException {
 		User o;
+		System.out.println("Logeando...");
 		try {
 			o = userDAO.findByUsername(user.getUsername());
 		} catch (Exception e) {
@@ -66,8 +69,17 @@ public class UserBusiness implements IUserBusiness {
 	public void listen(User user) throws BusinessException, NotFoundException {
 		try {
 			System.out.println("Iniciando subscripcion");
-			MqttSubscriber subscriber = new MqttSubscriber();
+			subscriber = new MqttSubscriber();
 			subscriber.startSubscription();
+		} catch (Exception e) {
+			throw new BusinessException(e);
+		}
+	}
+	
+	public void off(User user) throws BusinessException, NotFoundException {
+		try {
+			System.out.println("Deteniendo subscripcion");
+			subscriber.stopSubscription();
 		} catch (Exception e) {
 			throw new BusinessException(e);
 		}
