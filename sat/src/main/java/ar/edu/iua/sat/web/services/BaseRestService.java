@@ -35,6 +35,8 @@ public class BaseRestService {
 	protected ResponseEntity<Object> genToken(String username, int diasvalido, String auth) {
 		try {
 			cba.check(auth);
+			System.out.println("User: " + username);
+			System.out.println("Days: " + diasvalido);
 			AuthToken token = buildToken(username, diasvalido);
 			return new ResponseEntity<Object>("{\n" + "	\"username\":\"" + token.getUsername() + "\",\n"
 					+ "	\"token\":\"" + token.encodeCookieValue() + "\"\n}", HttpStatus.OK);
@@ -55,7 +57,7 @@ public class BaseRestService {
 			log.error("Business");
 			return new ResponseEntity<Object>(HttpStatus.INTERNAL_SERVER_ERROR);
 		} catch (NotFoundException nf) {
-			log.error("NotFound");
+			log.error(nf.getMessage());
 			return new ResponseEntity<Object>(HttpStatus.NOT_FOUND);
 		} catch (ExpiredTokenException et) {
 			log.error("Expired");

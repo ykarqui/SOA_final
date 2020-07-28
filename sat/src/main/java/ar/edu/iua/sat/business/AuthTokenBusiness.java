@@ -46,7 +46,6 @@ public class AuthTokenBusiness implements IAuthTokenBusiness {
 			Calendar today = Calendar.getInstance();
 			today.setTime(new Date());
 			if(today.getTime().compareTo(at.getTo())<0) {
-				System.out.println("TOKEN VALIDO!");
 			} else {
 				throw new ExpiredTokenException();
 			}

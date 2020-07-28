@@ -4,12 +4,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	
-	<groupId>ar.edu.iua.soa</groupId>
+	<groupId>ar.edu.iua.edu.soa</groupId>
 	<artifactId>cse</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	
+	<version>1.0</version>
 	<name>cse</name>
-	<description>Componente de Sistema Embebido</description>
+	<packaging>jar</packaging>
+	<description>Componente Sistema Embebido. (CSE)</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -98,8 +98,22 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+		      <!-- Build an executable JAR -->
+		      <groupId>org.apache.maven.plugins</groupId>
+		      <artifactId>maven-jar-plugin</artifactId>
+		      <configuration>
+		        <archive>
+		          <manifest>
+		            <addClasspath>true</addClasspath>
+		            <classpathPrefix>lib/</classpathPrefix>
+		            <mainClass>ar.edu.iua.soa.cse.CseApplication</mainClass>
+		          </manifest>
+		        </archive>
+		      </configuration>
+		    </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>

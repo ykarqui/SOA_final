@@ -64,7 +64,7 @@ public class User {
 		this.password = password;
 	}
 	public String getToken() {
-		return password;
+		return token;
 	}
 	public void setToken(String token) {
 		this.token = token;

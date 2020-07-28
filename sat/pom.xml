@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>ar.edu.iua</groupId>
 	<artifactId>sat</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>sat</name>
 	<packaging>jar</packaging>
 	<description>Sistema de autenticación por token. (SAT)</description>

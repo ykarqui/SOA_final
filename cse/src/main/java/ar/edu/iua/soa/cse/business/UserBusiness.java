@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.BasicResponseHandler;
@@ -31,8 +32,6 @@ public class UserBusiness implements IUserBusiness {
 	
 	@Autowired
 	private PasswordEncoder pe;
-	
-	private MqttSubscriber subscriber;
 
 	@Override
 	public User load(long id) throws BusinessException, NotFoundException {
@@ -51,7 +50,6 @@ public class UserBusiness implements IUserBusiness {
 	@Override
 	public User check(LoginDTO user) throws BusinessException, NotFoundException {
 		User o;
-		System.out.println("Logeando...");
 		try {
 			o = userDAO.findByUsername(user.getUsername());
 		} catch (Exception e) {
@@ -66,38 +64,45 @@ public class UserBusiness implements IUserBusiness {
 	}
 	
 	@Override
-	public void listen(User user) throws BusinessException, NotFoundException {
+	public boolean generateToken(String username) throws BusinessException, NotFoundException {
+		User o;
 		try {
-			System.out.println("Iniciando subscripcion");
-			subscriber = new MqttSubscriber();
-			subscriber.startSubscription();
-		} catch (Exception e) {
-			throw new BusinessException(e);
-		}
-	}
-	
-	public void off(User user) throws BusinessException, NotFoundException {
-		try {
-			System.out.println("Deteniendo subscripcion");
-			subscriber.stopSubscription();
+			o = userDAO.findByUsername(username);
+			if(o != null) {
+				getToken(o);
+				update(o);
+				return true;
+			} else {
+				throw new NotFoundException();
+			}
+		} catch (NotFoundException e) {
+			throw new NotFoundException(e);
 		} catch (Exception e) {
 			throw new BusinessException(e);
 		}
 	}
 	
 	@Override
-	public User checkToken(UserDTO user) throws BusinessException, NotFoundException {
+	public boolean checkToken(String username) throws BusinessException, NotFoundException, UnauthorizedException {
 		User o;
 		try {
-			o = userDAO.findByUsername(user.getUsername());
-			System.out.println("Usuario: " + o.getUsername());
+			o = userDAO.findByUsername(username);
+			if(o != null) {
+				if (checkTokenSat(o).equals(200)) {
+					return true;
+				} else {
+					throw new UnauthorizedException();
+				}
+			} else {
+				throw new NotFoundException();
+			}
+		} catch (UnauthorizedException e) {
+			throw new UnauthorizedException(e);
+		} catch (NotFoundException e) {
+			throw new NotFoundException(e);
 		} catch (Exception e) {
 			throw new BusinessException(e);
-		}
-		if (o != null) {
-			
-		}
-		throw new NotFoundException();
+		} 
 	}
 
 	@Override
@@ -154,14 +159,14 @@ public class UserBusiness implements IUserBusiness {
 		return l.get(0);
 	}
 	
-	private void getToken(User user) {
+	private void getToken(User user) throws BusinessException {
 		UserDTO udto = new UserDTO(user.getUsername(), 1);
 		Gson gson = new Gson();
 		String json = gson.toJson(udto);
 		HttpClient httpClient = HttpClientBuilder.create().build();
 		String responseString = "";
 		try {
-			HttpPost request = new HttpPost("http://localhost:8094/sat/v1/authtoken");
+			HttpPost request = new HttpPost("http://sat:8094/sat/v1/authtoken");
 			StringEntity body = new StringEntity(json);
 			request.addHeader("content-type", "application/json");
 			request.addHeader("Authorization", getAuthorization()); 
@@ -176,7 +181,22 @@ public class UserBusiness implements IUserBusiness {
 			user.setToken(token[1]);
 			
 		} catch (Exception ex) {
-			System.out.println("BOOM");
+			throw new BusinessException(ex);
+		}
+	}
+	
+	private Integer checkTokenSat(User user) throws BusinessException {
+		HttpClient httpClient = HttpClientBuilder.create().build();
+		try {
+			HttpGet request = new HttpGet("http://sat:8094/sat/v1/authtoken");
+			request.addHeader("username", user.getUsername());
+			request.addHeader("auth-token", user.getToken());
+			
+			HttpResponse response = httpClient.execute(request);
+			return response.getStatusLine().getStatusCode();
+			
+		} catch (Exception ex) {
+			throw new BusinessException();
 		}
 	}
 	

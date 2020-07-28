@@ -1,0 +1,57 @@
+version: '3'
+services:
+        nginx-proxy:
+                image: "nginx:1.18.0"
+                container_name: nginx-proxy
+                restart: always
+                depends_on:
+                        - mqtt
+                        - mysql_db
+                        - cse
+                        - sat
+                ports:
+                        - "80:80"
+                volumes:
+                        - /etc/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
+                        - /var/www/html/index.nginx-debian.html:/usr/share/nginx/html/index.html
+        mqtt:
+                image: "eclipse-mosquitto:1.6.9"
+                container_name: mqtt
+                ports:
+                        - "1883:1883"
+                        - "9001:9001"
+                volumes:
+                        - /etc/mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf
+                        - /etc/mosquitto/user_password_soa.txt:/mosquitto/config/user_password_soa.txt
+                environment:
+                        - VIRTUAL_HOST=mqtt
+        mysql_db:
+                image: "mysql:5.7"
+                container_name: mysql_db
+                ports:
+                        - "42333:3306"
+                environment:
+                        - "MYSQL_ROOT_PASSWORD=root"
+                        - VIRTUAL_HOST=mysql
+        cse:
+                build: cse/
+                container_name: cse
+                depends_on:
+                        - mysql_db
+                command: ["./wait-for-it.sh", "mysql_db:3306"]
+                expose:
+                        - "8093"
+                environment:
+                        - VIRTUAL_HOST=cse
+                restart: on-failure
+        sat:
+                build: sat/
+                container_name: sat
+                depends_on:
+                        - mysql_db
+                command: ["./wait-for-it.sh", "mysql_db:3306"]
+                expose:
+                        - "8094"
+                environment:
+                        - VIRTUAL_HOST=sat
+                restart: on-failure
